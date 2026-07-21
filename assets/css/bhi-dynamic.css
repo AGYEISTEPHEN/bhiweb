@@ -1,0 +1,214 @@
+/* ============================================================
+   assets/css/bhi-dynamic.css
+   Styles for: Outreach Programs, Gallery, Lightbox,
+   Screening Modal, Form error states, Loading/Empty states
+   Drop this <link> into the combined HTML <head>, after the
+   inline <style> block, or merge directly into it.
+   ============================================================ */
+
+/* ── Shared tokens (reuse if already defined in page) ───────── */
+:root {
+  --navy: #1B2F6E; --navy-dark: #0f1d47; --red: #C8102E; --red-dark: #a00d25;
+  --gold: #E6A817; --success: #2E8B57; --text-dark: #1E293B; --text-mid: #475569;
+  --text-light: #94a3b8; --border: #e2e8f0; --light-bg: #F7F9FC;
+}
+
+/* ── Section wrapper for new sections ─────────────────────────── */
+.bhi-section { padding: 6rem 2rem; }
+.bhi-section.alt { background: var(--light-bg); }
+.bhi-container { max-width: 1200px; margin: 0 auto; }
+
+/* ── Loading / Empty states ───────────────────────────────────── */
+.bhi-loading, .bhi-empty {
+  text-align: center; padding: 3rem 1rem; color: var(--text-light);
+  font-size: .95rem; grid-column: 1 / -1;
+}
+.bhi-loading::before { content: "⏳ "; }
+
+/* ── Form error states ────────────────────────────────────────── */
+.bhi-error-input { border-color: var(--red) !important; background: #fef2f2 !important; }
+.bhi-field-error { display: block; }
+
+/* ============================================================
+   OUTREACH PROGRAMS SECTION
+   ============================================================ */
+.outreach-filters {
+  display: flex; gap: .6rem; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;
+}
+.outreach-filters button {
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .8rem;
+  padding: .55rem 1.3rem; border-radius: 50px; border: 1.5px solid var(--border);
+  background: #fff; color: var(--text-mid); cursor: pointer; transition: all .2s;
+}
+.outreach-filters button:hover { border-color: var(--navy); color: var(--navy); }
+.outreach-filters button.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+#outreach-programs-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.outreach-card {
+  background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(27,47,110,.07); transition: transform .25s, box-shadow .25s;
+  display: flex; flex-direction: column;
+}
+.outreach-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(27,47,110,.14); }
+
+.outreach-card-img {
+  height: 180px; background-size: cover; background-position: center;
+  position: relative; background-color: #e2e8f0;
+}
+.outreach-badge {
+  position: absolute; top: 12px; right: 12px; color: #fff;
+  font-family: 'Montserrat', sans-serif; font-size: .65rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em; padding: .3rem .75rem; border-radius: 50px;
+}
+
+.outreach-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.outreach-type {
+  font-family: 'Montserrat', sans-serif; font-size: .68rem; font-weight: 700;
+  color: var(--red); text-transform: uppercase; letter-spacing: .06em;
+}
+.outreach-card-body h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 800;
+  color: var(--navy); margin: .4rem 0 .6rem; line-height: 1.3;
+}
+.outreach-loc, .outreach-date {
+  font-size: .85rem; color: var(--text-mid); margin-bottom: .35rem;
+}
+.outreach-summary {
+  font-size: .88rem; color: var(--text-mid); line-height: 1.55; margin: .75rem 0;
+}
+
+.outreach-progress { margin: .9rem 0; }
+.outreach-progress-bar {
+  height: 7px; background: #e2e8f0; border-radius: 50px; overflow: hidden; margin-bottom: .4rem;
+}
+.outreach-progress-bar div { height: 100%; background: var(--success); border-radius: 50px; }
+.outreach-progress span { font-size: .76rem; color: var(--text-light); font-weight: 600; }
+
+.outreach-card-actions { margin-top: auto; padding-top: 1rem; }
+.btn-outreach-register {
+  width: 100%; background: var(--red); color: #fff; border: none; padding: .8rem 1rem;
+  border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .85rem;
+  cursor: pointer; transition: background .2s;
+}
+.btn-outreach-register:hover { background: var(--red-dark); }
+.outreach-closed {
+  display: block; text-align: center; font-size: .82rem; color: var(--text-light);
+  font-style: italic; padding: .6rem 0;
+}
+
+/* ============================================================
+   GALLERY SECTION
+   ============================================================ */
+.gallery-filter-tabs {
+  display: flex; gap: .5rem; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;
+}
+.gallery-tab {
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .78rem;
+  padding: .5rem 1.1rem; border-radius: 50px; border: 1.5px solid var(--border);
+  background: #fff; color: var(--text-mid); cursor: pointer; transition: all .2s;
+}
+.gallery-tab:hover { border-color: var(--navy); color: var(--navy); }
+.gallery-tab.active { background: var(--red); border-color: var(--red); color: #fff; }
+
+#gallery-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.gallery-item {
+  position: relative; aspect-ratio: 4/3; border-radius: 10px; overflow: hidden;
+  cursor: pointer; background: #e2e8f0;
+}
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover; transition: transform .35s;
+}
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-overlay {
+  position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,29,71,.75), transparent 55%);
+  display: flex; align-items: flex-end; padding: .75rem; opacity: 0; transition: opacity .25s;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay span {
+  color: #fff; font-family: 'Montserrat', sans-serif; font-size: .72rem; font-weight: 700;
+}
+
+.gallery-pagination { display: flex; gap: .5rem; justify-content: center; margin-top: 2rem; }
+.gallery-page-btn {
+  width: 34px; height: 34px; border-radius: 8px; border: 1.5px solid var(--border);
+  background: #fff; color: var(--text-mid); font-weight: 700; cursor: pointer; font-size: .85rem;
+}
+.gallery-page-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+/* ── Featured gallery strip (homepage) ───────────────────────── */
+#featured-gallery-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: 2rem;
+}
+.featured-gallery-item { aspect-ratio: 1; border-radius: 10px; overflow: hidden; }
+.featured-gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.featured-gallery-item:hover img { transform: scale(1.1); }
+@media (max-width: 700px) {
+  #featured-gallery-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.bhi-lightbox {
+  display: none; position: fixed; inset: 0; background: rgba(15,29,71,.96);
+  z-index: 99999; align-items: center; justify-content: center; flex-direction: column;
+}
+.bhi-lightbox-img {
+  max-width: 88vw; max-height: 78vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.bhi-lightbox-caption { color: rgba(255,255,255,.8); margin-top: 1rem; font-size: .9rem; max-width: 600px; text-align: center; }
+.bhi-lightbox-close {
+  position: absolute; top: 24px; right: 32px; background: none; border: none;
+  color: #fff; font-size: 2.2rem; cursor: pointer; line-height: 1; opacity: .8;
+}
+.bhi-lightbox-close:hover { opacity: 1; }
+.bhi-lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.1);
+  border: none; color: #fff; font-size: 2rem; width: 52px; height: 52px; border-radius: 50%;
+  cursor: pointer; transition: background .2s;
+}
+.bhi-lightbox-nav:hover { background: rgba(255,255,255,.2); }
+.bhi-lightbox-nav.prev { left: 24px; } .bhi-lightbox-nav.next { right: 24px; }
+
+/* ============================================================
+   SCREENING REGISTRATION MODAL
+   ============================================================ */
+#bhi-screening-modal {
+  display: none; position: fixed; inset: 0; background: rgba(15,29,71,.6); z-index: 9000;
+  align-items: center; justify-content: center; padding: 1.5rem;
+}
+.bhi-modal-box {
+  background: #fff; border-radius: 16px; max-width: 540px; width: 100%;
+  max-height: 90vh; overflow-y: auto;
+}
+.bhi-modal-header {
+  background: var(--navy); padding: 1.5rem 2rem; display: flex; justify-content: space-between;
+  align-items: center; position: sticky; top: 0;
+}
+.bhi-modal-title { color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.05rem; }
+.bhi-modal-close { background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; opacity: .8; }
+.bhi-modal-close:hover { opacity: 1; }
+.bhi-modal-body { padding: 2rem; }
+
+/* ── Impact stats grid (if dynamically loaded) ───────────────── */
+#impact-stats-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;
+}
+.impact-stat-box { text-align: center; }
+.impact-stat-icon { font-size: 2rem; margin-bottom: .5rem; }
+.impact-stat-value {
+  font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 900; color: var(--navy);
+}
+.impact-stat-label { font-size: .85rem; color: var(--text-mid); margin-top: .3rem; }
+
+@media (max-width: 600px) {
+  .bhi-section { padding: 4rem 1.25rem; }
+  #outreach-programs-grid { grid-template-columns: 1fr; }
+}
