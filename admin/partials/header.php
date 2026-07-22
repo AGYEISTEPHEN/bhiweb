@@ -95,7 +95,7 @@ $admin = current_admin();
 <aside class="sidebar">
   <a href="index.php" class="sb-logo">
     <div class="sb-logo-icon">
-      <img src="<?= SITE_URL ?>/assets/img/bhi-logo.jpeg" alt="BHI logo">
+      <img src="<?= SITE_URL ?>/assets/img/bhi-logo.png" alt="BHI logo">
     </div>
     <div class="sb-logo-text">BHI Admin<span>Bono Heart Initiative</span></div>
   </a>

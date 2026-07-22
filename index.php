@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bono Heart Initiative | Cardio-Metabolic-Renal Care â€” Bono Region Ghana</title>
-<link rel="icon" type="image/png" sizes="512x512" href="assets/img/bhi-logo.jpeg"/>
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/bhi-logo.png"/>
 <meta name="description" content="BHI brings free cardio-metabolic-renal screening, echocardiography, and specialist referral to underserved communities across the Bono Region. Get screened. Support the mission.">
 <meta property="og:title" content="Bono Heart Initiative â€” Cardio-Metabolic-Renal Care for All">
 <meta property="og:description" content="Heart care should not depend on where you live. BHI addresses the full cardio-metabolic-renal continuum â€” heart, diabetes, kidneys â€” across the Bono Region, Ghana.">
@@ -18,7 +18,7 @@
 <nav id="main-nav">
   <a href="#" class="nav-logo" onclick="switchPage('home'); return false;">
     <div class="nav-logo-icon">
-      <img src="assets/img/bhi-logo.jpeg" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+      <img src="assets/img/bhi-logo.png" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
     </div>
     <div class="nav-logo-text">
       Bono Heart Initiative
@@ -987,7 +987,7 @@
     <div class="footer-brand">
       <div class="footer-logo">
         <div class="footer-logo-icon">
-          <img src="assets/img/bhi-logo.jpeg" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+          <img src="assets/img/bhi-logo.png" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
         </div>
         <div class="footer-logo-text">
           Bono Heart Initiative
