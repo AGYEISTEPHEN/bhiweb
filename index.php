@@ -17,7 +17,9 @@
 
 <nav id="main-nav">
   <a href="#" class="nav-logo" onclick="switchPage('home'); return false;">
-    <div class="nav-logo-icon">ðŸ«€</div>
+    <div class="nav-logo-icon">
+      <img src="assets/img/bhi-logo.jpeg" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+    </div>
     <div class="nav-logo-text">
       Bono Heart Initiative
       <span>Cardio-Metabolic-Renal Care for All</span>
@@ -163,7 +165,7 @@
         <div class="founder-photo-wrap">
           <div class="founder-photo-placeholder" style="border:none; background:none; padding:0;">
             <img
-              src="assets/img/dr-bediako-mensah.png"
+              src="assets/img/dr.png"
               alt="Dr. Edward Bediako Mensah — Consulting Cardiologist, Founder of Bono Heart Initiative"
               style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:16px; display:block;"
             >
@@ -984,7 +986,9 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <div class="footer-logo-icon">ðŸ«€</div>
+        <div class="footer-logo-icon">
+          <img src="assets/img/bhi-logo.jpeg" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+        </div>
         <div class="footer-logo-text">
           Bono Heart Initiative
           <span>Cardio-Metabolic-Renal Care for All</span>

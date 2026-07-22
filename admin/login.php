@@ -63,7 +63,8 @@ $csrf = csrf_token();
     background:linear-gradient(135deg,var(--navy) 0%,#0f1d47 100%)}
   .card{background:#fff;border-radius:16px;padding:3rem 2.5rem;width:100%;max-width:420px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
   .logo{text-align:center;margin-bottom:2rem}
-  .logo-icon{width:56px;height:56px;background:var(--red);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:.75rem}
+  .logo-icon{width:56px;height:56px;background:none;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:.75rem;overflow:hidden}
+  .logo-icon img{width:100%;height:100%;object-fit:cover;border-radius:50%}
   .logo h1{font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:var(--navy)}
   .logo p{font-size:.78rem;color:#94a3b8;margin-top:.2rem}
   label{display:block;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#475569;margin-bottom:.4rem}
@@ -78,7 +79,9 @@ $csrf = csrf_token();
 <body>
 <div class="card">
   <div class="logo">
-    <div class="logo-icon">🫀</div>
+    <div class="logo-icon">
+      <img src="../assets/img/bhi-logo.jpeg" alt="BHI logo">
+    </div>
     <h1>Bono Heart Initiative</h1>
     <p>Admin Portal</p>
   </div>
@@ -95,6 +98,9 @@ $csrf = csrf_token();
     <input type="password" name="password" placeholder="••••••••••" required>
     <button type="submit" class="btn">Sign In →</button>
   </form>
+  <div style="margin-top:1.25rem;text-align:center;font-size:.9rem;">
+    <a href="<?= SITE_URL ?>" style="color:#0f1d47;text-decoration:none;font-weight:700;">← Back to site</a>
+  </div>
 </div>
 </body>
 </html>

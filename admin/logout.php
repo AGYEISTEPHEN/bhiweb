@@ -9,5 +9,5 @@ bhi_session_start();
 log_activity('logout');
 $_SESSION = [];
 session_destroy();
-header('Location: login.php');
+header('Location: login');
 exit;

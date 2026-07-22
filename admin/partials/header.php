@@ -23,7 +23,8 @@ $admin = current_admin();
   /* Sidebar */
   .sidebar{width:240px;flex-shrink:0;background:var(--navy-dk);display:flex;flex-direction:column;min-height:100vh;position:fixed;top:0;left:0;bottom:0;z-index:100}
   .sb-logo{padding:1.5rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:.75rem;text-decoration:none}
-  .sb-logo-icon{width:36px;height:36px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+  .sb-logo-icon{width:36px;height:36px;background:none;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;overflow:hidden}
+  .sb-logo-icon img{width:100%;height:100%;object-fit:cover;border-radius:50%}
   .sb-logo-text{color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.85rem;line-height:1.2}
   .sb-logo-text span{display:block;font-size:.6rem;font-weight:400;color:rgba(255,255,255,.5)}
   nav.sb-nav{flex:1;padding:1rem 0;overflow-y:auto}
@@ -93,7 +94,9 @@ $admin = current_admin();
 
 <aside class="sidebar">
   <a href="index.php" class="sb-logo">
-    <div class="sb-logo-icon">🫀</div>
+    <div class="sb-logo-icon">
+      <img src="<?= SITE_URL ?>/assets/img/bhi-logo.jpeg" alt="BHI logo">
+    </div>
     <div class="sb-logo-text">BHI Admin<span>Bono Heart Initiative</span></div>
   </a>
   <nav class="sb-nav">
