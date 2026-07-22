@@ -1,4 +1,37 @@
-﻿<!DOCTYPE html>
+﻿<?php
+require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/Database.php';
+require_once __DIR__ . '/includes/helpers.php';
+
+$publicBase = rtrim(dirname($_SERVER['SCRIPT_NAME'] ?? '/'), '/');
+if ($publicBase === '' || $publicBase === '/') {
+  $publicBase = '';
+}
+
+$impactStats = Database::fetchAll(
+    "SELECT label, value, icon FROM impact_stats ORDER BY sort_order"
+);
+
+$featuredPrograms = Database::fetchAll(
+    "SELECT id, title, summary, district, community, program_type, status,
+            scheduled_date, scheduled_time, registration_open, screening_target, screened_count, cover_image
+     FROM outreach_programs
+     WHERE is_published = 1
+     ORDER BY is_featured DESC, scheduled_date ASC
+     LIMIT 6"
+);
+
+$programTypeLabels = [
+    'community_screening' => 'Community Screening',
+    'school_outreach' => 'School Outreach',
+    'market_screening' => 'Market Screening',
+    'church_outreach' => 'Church Outreach',
+    'clinic_day' => 'Clinic Day',
+    'awareness_campaign' => 'Awareness Campaign',
+    'other' => 'Outreach Program',
+];
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">

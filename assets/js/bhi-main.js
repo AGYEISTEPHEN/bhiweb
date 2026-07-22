@@ -7,9 +7,14 @@
 
 const BHI = {
   apiBase: (() => {
-    const basePath = window.location.pathname.replace(/\/[^/]*$/, '');
-    return `${window.location.origin}${basePath}/api`;
+    const path = window.location.pathname.replace(/\/index\.php$/i, '').replace(/\/$/, '');
+    return `${window.location.origin}${path || ''}/api`;
   })(),
+
+  assetBase() {
+    const path = window.location.pathname.replace(/\/index\.php$/i, '').replace(/\/$/, '');
+    return `${window.location.origin}${path || ''}`;
+  },
 
   apiUrl(endpoint) {
     return `${this.apiBase}/${endpoint}`;
@@ -225,7 +230,7 @@ const BHI = {
       const date = new Date(p.scheduled_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
       const pct = p.screening_target ? Math.min(100, Math.round((p.screened_count / p.screening_target) * 100)) : null;
       const img = p.cover_image
-        ? `/uploads/outreach/${p.cover_image}`
+        ? `${this.assetBase()}/uploads/outreach/${encodeURIComponent(p.cover_image)}`
         : 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=70';
 
       return `
