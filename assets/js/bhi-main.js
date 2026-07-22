@@ -6,15 +6,37 @@
    ============================================================ */
 
 const BHI = {
-  apiBase: '/bhiweb/api',   // adjust to your XAMPP folder, e.g. http://localhost/bhi/api
+  apiBase: (() => {
+    const basePath = window.location.pathname.replace(/\/[^/]*$/, '');
+    return `${window.location.origin}${basePath}/api`;
+  })(),
+
+  apiUrl(endpoint) {
+    return `${this.apiBase}/${endpoint}`;
+  },
 
   // ── Generic POST helper ─────────────────────────────────────
   async post(endpoint, formData) {
     try {
-      const res = await fetch(`${this.apiBase}/${endpoint}`, {
+      const res = await fetch(this.apiUrl(endpoint), {
         method: 'POST',
         headers: { 'X-Requested-With': 'XMLHttpRequest' },
         body: formData,
+      });
+      return await res.json();
+    } catch (err) {
+      return { success: false, message: 'Network error. Please check your connection and try again.' };
+    }
+  },
+
+  // ── Generic GET helper ──────────────────────────────────────
+  async get(endpoint, params = {}) {
+    try {
+      const qs = new URLSearchParams(params).toString();
+      const url = this.apiUrl(endpoint) + (qs ? `?${qs}` : '');
+      const res = await fetch(url, {
+        method: 'GET',
+        headers: { 'X-Requested-With': 'XMLHttpRequest' },
       });
       return await res.json();
     } catch (err) {

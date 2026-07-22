@@ -2455,6 +2455,7 @@
     <li><a href="#outreach">Outreach</a></li>
     <li><a href="#field">Gallery</a></li>
     <li><a href="#partners">Partners</a></li>
+    <li><a href="admin/login.php">Admin Login</a></li>
     <li>
       <div class="nav-page-tabs">
         <button class="nav-page-tab active" id="tab-home" onclick="switchPage('home')">Home</button>
@@ -3438,6 +3439,7 @@
       <a href="#impact">Impact</a>
       <a href="#" onclick="switchPage('education'); return false;">CMR Education</a>
       <a href="#" onclick="switchPage('founder'); return false;">Meet the Founder</a>
+      <a href="admin/login.php">Admin Login</a>
     </div>
     <div class="footer-col">
       <h4>Get Involved</h4>
