@@ -54,6 +54,7 @@ $csrf = csrf_token();
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Login — Bono Heart Initiative</title>
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/img/bhi-logo.jpeg"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--navy:#1B2F6E;--red:#C8102E;--gold:#E6A817}
