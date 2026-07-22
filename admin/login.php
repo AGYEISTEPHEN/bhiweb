@@ -99,7 +99,7 @@ $csrf = csrf_token();
     <button type="submit" class="btn">Sign In →</button>
   </form>
   <div style="margin-top:1.25rem;text-align:center;font-size:.9rem;">
-    <a href="index" style="color:#0f1d47;text-decoration:none;font-weight:700;">← Back to site</a>
+    <a href="<?= SITE_URL ?>" style="color:#0f1d47;text-decoration:none;font-weight:700;">← Back to site</a>
   </div>
 </div>
 </body>
