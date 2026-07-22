@@ -16,7 +16,7 @@ define('DB_CHARSET',  'utf8mb4');
 
 // ── Site ─────────────────────────────────────────────────────
 define('SITE_NAME',   'Bono Heart Initiative');
-define('SITE_URL',    'http://index');   // No trailing slash
+define('SITE_URL',    'http://bonoheartinitiative.org/index');   // No trailing slash
 define('ADMIN_EMAIL', 'admin@bonoheartinitiative.org');
 define('CONTACT_EMAIL','info@bonoheartinitiative.org');
 
