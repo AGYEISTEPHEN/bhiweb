@@ -9,7 +9,7 @@ define('BHI_VERSION', '1.0.0');
 // ── Database ─────────────────────────────────────────────────
 define('DB_HOST',     'localhost');
 define('DB_PORT',     '3306');
-define('DB_NAME',     'bonohear_bhiweb');
+define('DB_NAME',     'bhi_db');
 define('DB_USER',     'bonohear_bhiapp');          // Change for production
 define('DB_PASS',     'BHI@2026');              // Change for production
 define('DB_CHARSET',  'utf8mb4');

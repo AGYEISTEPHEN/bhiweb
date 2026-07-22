@@ -23,12 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$email || !$password) {
         $error = 'Email and password are required.';
     } else {
-        $admin = Database::fetchOne(
-            "SELECT * FROM admin_users WHERE email = ? AND is_active = 1",
-            [$email]
-        );
+        try {
+            $admin = Database::fetchOne(
+                "SELECT * FROM admin_users WHERE email = ? AND is_active = 1",
+                [$email]
+            );
+        } catch (Throwable $e) {
+            $admin = null;
+            $error = 'Unable to connect to the admin database. Please verify the database server and import the schema.';
+        }
 
-        if ($admin && password_verify($password, $admin['password'])) {
+        if (!$error && $admin && password_verify($password, $admin['password'])) {
             $_SESSION['admin_id']   = $admin['id'];
             $_SESSION['admin_name'] = $admin['name'];
             $_SESSION['admin_role'] = $admin['role'];
@@ -43,7 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: index.php');
             exit;
         }
-        $error = 'Invalid email or password.';
+        if (!$error) {
+            $error = 'Invalid email or password.';
+        }
     }
 }
 $csrf = csrf_token();

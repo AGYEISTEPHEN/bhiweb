@@ -1,14 +1,4 @@
--- ============================================================
--- Bono Heart Initiative — Complete Database Schema
--- XAMPP / MySQL 5.7+  |  Charset: utf8mb4
--- Run this file in phpMyAdmin or via: mysql -u root -p < bhi_schema.sql
--- ============================================================
 
-CREATE DATABASE IF NOT EXISTS bhi_db
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE bhi_db;
 
 -- ── 1. ADMIN USERS ────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS admin_users (
