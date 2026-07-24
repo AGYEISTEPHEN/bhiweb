@@ -840,7 +840,7 @@ $programTypeLabels = [
       <p>All partner contributions are acknowledged in writing. BHI commits to annual impact reporting — showing exactly what your investment achieved.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
         <a href="#partner-form" class="btn-primary" onclick="document.getElementById('partner-form').scrollIntoView({behavior:'smooth'})">Partner With BHI</a>
-        <a href="/strategic-plan" class="btn-secondary" style="color:var(--navy); border-color:var(--navy);">Download Partnership Prospectus</a>
+        <a href="/strategic-plan" class="btn-secondary" style="color:var(--navy); border-color:var(--navy);">View Strategic Plan 2026–2028</a>
       </div>
     </div>
 
