@@ -11,6 +11,9 @@ $page_title = 'Subscribers';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_login();
+    if (!csrf_verify(post('csrf_token'))) {
+        die('Invalid session token. Please go back and refresh the page, then try again.');
+    }
     if (post('action') === 'delete') {
         Database::execute("DELETE FROM subscribers WHERE id=?", [(int)post('id')]);
     }
@@ -55,6 +58,7 @@ require_once 'partials/header.php';
         <td>
           <form method="POST" onsubmit="return confirm('Remove this subscriber?')">
             <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
             <input type="hidden" name="id" value="<?= $s['id'] ?>">
             <button type="submit" class="btn" style="background:#fee2e2;color:#991b1b;font-size:.7rem">Remove</button>
           </form>

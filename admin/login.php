@@ -17,6 +17,9 @@ if (is_logged_in()) {
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!csrf_verify(post('csrf_token'))) {
+        $error = 'Your session expired. Please try again.';
+    } else {
     $email    = filter_var(post('email'), FILTER_SANITIZE_EMAIL);
     $password = post('password');
 
@@ -51,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!$error) {
             $error = 'Invalid email or password.';
         }
+    }
     }
 }
 $csrf = csrf_token();

@@ -12,6 +12,9 @@ $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_login();
+    if (!csrf_verify(post('csrf_token'))) {
+        die('Invalid session token. Please go back and refresh the page, then try again.');
+    }
     if (post('action') === 'update_status') {
         $id = (int) post('id');
         $status = clean(post('status'));
@@ -128,6 +131,7 @@ require_once 'partials/header.php';
         <td>
           <form method="POST" class="status-form">
             <input type="hidden" name="action" value="update_status">
+            <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
             <input type="hidden" name="id" value="<?= $r['id'] ?>">
             <select name="status" class="form-control" style="font-size:.75rem;padding:.3rem .5rem" onchange="this.form.submit()">
               <?php foreach (['pending','confirmed','screened','referred','no_show'] as $s): ?>

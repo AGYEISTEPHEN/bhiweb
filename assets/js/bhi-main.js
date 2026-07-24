@@ -38,21 +38,6 @@ const BHI = {
   async get(endpoint, params = {}) {
     try {
       const qs = new URLSearchParams(params).toString();
-      const url = this.apiUrl(endpoint) + (qs ? `?${qs}` : '');
-      const res = await fetch(url, {
-        method: 'GET',
-        headers: { 'X-Requested-With': 'XMLHttpRequest' },
-      });
-      return await res.json();
-    } catch (err) {
-      return { success: false, message: 'Network error. Please check your connection and try again.' };
-    }
-  },
-
-  // ── Generic GET helper ──────────────────────────────────────
-  async get(endpoint, params = {}) {
-    try {
-      const qs = new URLSearchParams(params).toString();
       const res = await fetch(`${this.apiBase}/${endpoint}${qs ? '?' + qs : ''}`, {
         headers: { 'X-Requested-With': 'XMLHttpRequest' },
       });

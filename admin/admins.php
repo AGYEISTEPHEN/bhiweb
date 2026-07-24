@@ -16,6 +16,9 @@ if (current_admin()['role'] !== 'superadmin') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!csrf_verify(post('csrf_token'))) {
+        die('Invalid session token. Please go back and refresh the page, then try again.');
+    }
     $action = post('action');
 
     if ($action === 'save_admin') {
@@ -87,6 +90,7 @@ require_once 'partials/header.php';
           <button class="btn btn-secondary" style="font-size:.72rem" onclick='editAdmin(<?= json_encode(["id"=>$a["id"],"name"=>$a["name"],"email"=>$a["email"],"role"=>$a["role"]]) ?>)'>Edit</button>
           <form method="POST" style="display:inline">
             <input type="hidden" name="action" value="toggle_active">
+            <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
             <input type="hidden" name="id" value="<?= $a['id'] ?>">
             <button type="submit" class="btn btn-secondary" style="font-size:.72rem"><?= $a['is_active']?'Disable':'Enable' ?></button>
           </form>
@@ -105,6 +109,7 @@ require_once 'partials/header.php';
     </div>
     <form method="POST" style="padding:1.5rem">
       <input type="hidden" name="action" value="save_admin">
+      <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
       <input type="hidden" name="id" id="a-id">
       <div class="form-group"><label class="form-label">Full Name</label><input name="name" id="a-name" class="form-control" required></div>
       <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" id="a-email" class="form-control" required></div>

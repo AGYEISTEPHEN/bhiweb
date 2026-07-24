@@ -12,6 +12,9 @@ $msg = $err = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_login();
+    if (!csrf_verify(post('csrf_token'))) {
+        die('Invalid session token. Please go back and refresh the page, then try again.');
+    }
     $action = post('action');
 
     if ($action === 'upload_image') {
@@ -168,6 +171,7 @@ require_once 'partials/header.php';
             <button class="btn btn-secondary" style="flex:1;font-size:.68rem;justify-content:center" onclick='editImage(<?= json_encode($img) ?>)'>Edit</button>
             <form method="POST" onsubmit="return confirm('Delete this image?')">
               <input type="hidden" name="action" value="delete_image">
+              <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
               <input type="hidden" name="id" value="<?= $img['id'] ?>">
               <button type="submit" class="btn" style="background:#fee2e2;color:#991b1b;font-size:.68rem">×</button>
             </form>
@@ -196,6 +200,7 @@ require_once 'partials/header.php';
     </div>
     <form method="POST" enctype="multipart/form-data" style="padding:1.5rem">
       <input type="hidden" name="action" value="bulk_upload">
+      <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
       <div class="form-group">
         <label class="form-label">Category</label>
         <select name="category_id" class="form-control" required>
@@ -231,6 +236,7 @@ require_once 'partials/header.php';
     </div>
     <form method="POST" style="padding:1.5rem">
       <input type="hidden" name="action" value="update_image">
+      <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
       <input type="hidden" name="id" id="e-id">
       <div class="form-group">
         <label class="form-label">Category</label>
@@ -260,6 +266,7 @@ require_once 'partials/header.php';
     </div>
     <form method="POST" style="padding:1.5rem">
       <input type="hidden" name="action" value="add_category">
+      <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
       <div class="form-group"><label class="form-label">Category Name</label><input name="cat_name" class="form-control" required></div>
       <div class="form-group"><label class="form-label">Sort Order</label><input type="number" name="sort_order" class="form-control" value="0"></div>
       <button type="submit" class="btn btn-primary" style="width:100%">Add Category</button>

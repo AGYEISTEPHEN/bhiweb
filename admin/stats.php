@@ -12,6 +12,9 @@ $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_login();
+    if (!csrf_verify(post('csrf_token'))) {
+        die('Invalid session token. Please go back and refresh the page, then try again.');
+    }
     $ids = $_POST['id'] ?? [];
     foreach ($ids as $i => $id) {
         Database::execute(
@@ -35,6 +38,7 @@ require_once 'partials/header.php';
     These numbers appear in the Impact section of the homepage. Update them as outreach programs progress.
   </p>
   <form method="POST">
+    <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
     <div class="grid-3">
     <?php foreach ($stats as $s): ?>
       <div style="border:1px solid var(--border);border-radius:10px;padding:1.25rem">

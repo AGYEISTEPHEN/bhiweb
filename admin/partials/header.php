@@ -8,6 +8,14 @@
 if (!defined('BHI_ADMIN')) die('Direct access not allowed.');
 require_login();
 $admin = current_admin();
+
+// ── Sidebar notification badges ────────────────────────────────
+$sb_counts = Database::fetchOne(
+    "SELECT
+      (SELECT COUNT(*) FROM screening_registrations WHERE status='pending')   AS pending_regs,
+      (SELECT COUNT(*) FROM contact_messages        WHERE status='new')       AS new_messages,
+      (SELECT COUNT(*) FROM partnership_enquiries   WHERE status='new')       AS new_partners"
+) ?: ['pending_regs' => 0, 'new_messages' => 0, 'new_partners' => 0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +35,11 @@ $admin = current_admin();
   .sb-logo-icon img{width:100%;height:100%;object-fit:cover;border-radius:50%}
   .sb-logo-text{color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.85rem;line-height:1.2}
   .sb-logo-text span{display:block;font-size:.6rem;font-weight:400;color:rgba(255,255,255,.5)}
-  nav.sb-nav{flex:1;padding:1rem 0;overflow-y:auto}
+  nav.sb-nav{flex:1;padding:1rem 0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(200,16,46,.5) rgba(255,255,255,.05)}
+  nav.sb-nav::-webkit-scrollbar{width:6px}
+  nav.sb-nav::-webkit-scrollbar-track{background:rgba(255,255,255,.04)}
+  nav.sb-nav::-webkit-scrollbar-thumb{background:rgba(200,16,46,.55);border-radius:50px}
+  nav.sb-nav::-webkit-scrollbar-thumb:hover{background:var(--red)}
   .sb-section{font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);padding:.75rem 1.25rem .3rem}
   .sb-link{display:flex;align-items:center;gap:.65rem;padding:.65rem 1.25rem;color:rgba(255,255,255,.65);text-decoration:none;font-size:.88rem;transition:all .15s;border-left:3px solid transparent}
   .sb-link:hover{color:#fff;background:rgba(255,255,255,.06);border-left-color:rgba(255,255,255,.2)}
@@ -95,7 +107,7 @@ $admin = current_admin();
 <aside class="sidebar">
   <a href="index" class="sb-logo">
     <div class="sb-logo-icon">
-      <img src="<?= SITE_URL ?>/../assets/img/bhi-logo.png" alt="BHI logo">
+      <img src="../assets/img/bhi-logo.png" alt="BHI logo">
     </div>
     <div class="sb-logo-text">BHI Admin<span>Bono Heart Initiative</span></div>
   </a>
@@ -109,10 +121,10 @@ $admin = current_admin();
     <a href="stats"        class="sb-link <?= basename($_SERVER['PHP_SELF'])==='stats'?'active':'' ?>"><span class="ico">📈</span> <span>Impact Stats</span></a>
 
     <div class="sb-section">Community</div>
-    <a href="registrations" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='registrations'?'active':'' ?>"><span class="ico">🩺</span> <span>Screening Registrations</span></a>
-    <a href="messages"     class="sb-link <?= basename($_SERVER['PHP_SELF'])==='messages'?'active':'' ?>"><span class="ico">✉️</span> <span>Contact Messages</span></a>
+    <a href="registrations" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='registrations'?'active':'' ?>"><span class="ico">🩺</span> <span>Screening Registrations</span><?php if ($sb_counts['pending_regs'] > 0): ?><span class="sb-badge"><?= $sb_counts['pending_regs'] ?></span><?php endif; ?></a>
+    <a href="messages"     class="sb-link <?= basename($_SERVER['PHP_SELF'])==='messages'?'active':'' ?>"><span class="ico">✉️</span> <span>Contact Messages</span><?php if ($sb_counts['new_messages'] > 0): ?><span class="sb-badge"><?= $sb_counts['new_messages'] ?></span><?php endif; ?></a>
     <a href="subscribers"  class="sb-link <?= basename($_SERVER['PHP_SELF'])==='subscribers'?'active':'' ?>"><span class="ico">📧</span> <span>Subscribers</span></a>
-    <a href="partnerships" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='partnerships'?'active':'' ?>"><span class="ico">🤝</span> <span>Partnerships</span></a>
+    <a href="partnerships" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='partnerships'?'active':'' ?>"><span class="ico">🤝</span> <span>Partnerships</span><?php if ($sb_counts['new_partners'] > 0): ?><span class="sb-badge"><?= $sb_counts['new_partners'] ?></span><?php endif; ?></a>
 
     <?php if ($admin['role']==='superadmin'): ?>
     <div class="sb-section">System</div>

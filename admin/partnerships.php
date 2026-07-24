@@ -12,6 +12,9 @@ $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_login();
+    if (!csrf_verify(post('csrf_token'))) {
+        die('Invalid session token. Please go back and refresh the page, then try again.');
+    }
     if (post('action') === 'update_status') {
         Database::execute("UPDATE partnership_enquiries SET status=? WHERE id=?", [clean(post('status')), (int)post('id')]);
         $msg = 'Status updated.';
@@ -44,6 +47,7 @@ require_once 'partials/header.php';
         <td>
           <form method="POST">
             <input type="hidden" name="action" value="update_status">
+            <input type="hidden" name="csrf_token" value="<?= csrf_token() ?>">
             <input type="hidden" name="id" value="<?= $e['id'] ?>">
             <select name="status" class="form-control" style="font-size:.75rem;padding:.3rem .5rem" onchange="this.form.submit()">
               <?php foreach (['new','contacted','negotiating','confirmed','declined'] as $s): ?>
