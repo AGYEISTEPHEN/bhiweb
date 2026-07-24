@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             );
             log_activity('login', 'admin_users', $admin['id']);
 
-            header('Location: index.php');
+            header('Location: index');
             exit;
         }
         if (!$error) {
@@ -96,7 +96,7 @@ $csrf = csrf_token();
   <?php if ($error): ?>
   <div class="error"><?= htmlspecialchars($error) ?></div>
   <?php endif; ?>
-  <form method="POST" action="login.php">
+  <form method="POST" action="login">
     <input type="hidden" name="csrf_token" value="<?= $csrf ?>">
     <label>Email Address</label>
     <input type="email" name="email" placeholder="admin@bonoheartinitiative.org"

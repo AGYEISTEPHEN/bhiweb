@@ -47,7 +47,7 @@ function require_login(): void {
         if (is_ajax()) {
             json_response(false, 'Authentication required.', [], 401);
         }
-        header('Location: ' . SITE_URL . '/admin/login.php');
+        header('Location: ' . SITE_URL . '/admin/login');
         exit;
     }
 }

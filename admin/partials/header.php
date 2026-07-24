@@ -93,37 +93,37 @@ $admin = current_admin();
 <body>
 
 <aside class="sidebar">
-  <a href="index.php" class="sb-logo">
+  <a href="index" class="sb-logo">
     <div class="sb-logo-icon">
-      <img src="<?= SITE_URL ?>/assets/img/bhi-logo.png" alt="BHI logo">
+      <img src="<?= SITE_URL ?>/../assets/img/bhi-logo.png" alt="BHI logo">
     </div>
     <div class="sb-logo-text">BHI Admin<span>Bono Heart Initiative</span></div>
   </a>
   <nav class="sb-nav">
     <div class="sb-section">Main</div>
-    <a href="index.php"        class="sb-link <?= basename($_SERVER['PHP_SELF'])==='index.php'?'active':'' ?>"><span class="ico">📊</span> <span>Dashboard</span></a>
+    <a href="index"        class="sb-link <?= basename($_SERVER['PHP_SELF'])==='index'?'active':'' ?>"><span class="ico">📊</span> <span>Dashboard</span></a>
 
     <div class="sb-section">Content</div>
-    <a href="outreach.php"     class="sb-link <?= basename($_SERVER['PHP_SELF'])==='outreach.php'?'active':'' ?>"><span class="ico">📍</span> <span>Outreach Programs</span></a>
-    <a href="gallery.php"      class="sb-link <?= basename($_SERVER['PHP_SELF'])==='gallery.php'?'active':'' ?>"><span class="ico">🖼️</span> <span>Gallery</span></a>
-    <a href="stats.php"        class="sb-link <?= basename($_SERVER['PHP_SELF'])==='stats.php'?'active':'' ?>"><span class="ico">📈</span> <span>Impact Stats</span></a>
+    <a href="outreach"     class="sb-link <?= basename($_SERVER['PHP_SELF'])==='outreach'?'active':'' ?>"><span class="ico">📍</span> <span>Outreach Programs</span></a>
+    <a href="gallery"      class="sb-link <?= basename($_SERVER['PHP_SELF'])==='gallery'?'active':'' ?>"><span class="ico">🖼️</span> <span>Gallery</span></a>
+    <a href="stats"        class="sb-link <?= basename($_SERVER['PHP_SELF'])==='stats'?'active':'' ?>"><span class="ico">📈</span> <span>Impact Stats</span></a>
 
     <div class="sb-section">Community</div>
-    <a href="registrations.php" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='registrations.php'?'active':'' ?>"><span class="ico">🩺</span> <span>Screening Registrations</span></a>
-    <a href="messages.php"     class="sb-link <?= basename($_SERVER['PHP_SELF'])==='messages.php'?'active':'' ?>"><span class="ico">✉️</span> <span>Contact Messages</span></a>
-    <a href="subscribers.php"  class="sb-link <?= basename($_SERVER['PHP_SELF'])==='subscribers.php'?'active':'' ?>"><span class="ico">📧</span> <span>Subscribers</span></a>
-    <a href="partnerships.php" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='partnerships.php'?'active':'' ?>"><span class="ico">🤝</span> <span>Partnerships</span></a>
+    <a href="registrations" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='registrations'?'active':'' ?>"><span class="ico">🩺</span> <span>Screening Registrations</span></a>
+    <a href="messages"     class="sb-link <?= basename($_SERVER['PHP_SELF'])==='messages'?'active':'' ?>"><span class="ico">✉️</span> <span>Contact Messages</span></a>
+    <a href="subscribers"  class="sb-link <?= basename($_SERVER['PHP_SELF'])==='subscribers'?'active':'' ?>"><span class="ico">📧</span> <span>Subscribers</span></a>
+    <a href="partnerships" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='partnerships'?'active':'' ?>"><span class="ico">🤝</span> <span>Partnerships</span></a>
 
     <?php if ($admin['role']==='superadmin'): ?>
     <div class="sb-section">System</div>
-    <a href="admins.php" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='admins.php'?'active':'' ?>"><span class="ico">👤</span> <span>Admin Users</span></a>
-    <a href="activity.php" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='activity.php'?'active':'' ?>"><span class="ico">📋</span> <span>Activity Log</span></a>
+    <a href="admins" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='admins'?'active':'' ?>"><span class="ico">👤</span> <span>Admin Users</span></a>
+    <a href="activity" class="sb-link <?= basename($_SERVER['PHP_SELF'])==='activity'?'active':'' ?>"><span class="ico">📋</span> <span>Activity Log</span></a>
     <?php endif; ?>
   </nav>
   <div class="sb-bottom">
     <div class="sb-avatar"><?= strtoupper(substr($admin['name'],0,1)) ?></div>
     <span class="sb-user-name"><?= htmlspecialchars($admin['name']) ?></span>
-    <a href="logout.php" class="sb-logout" title="Log out">⏏</a>
+    <a href="logout" class="sb-logout" title="Log out">⏏</a>
   </div>
 </aside>
 

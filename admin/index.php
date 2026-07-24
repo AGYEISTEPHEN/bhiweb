@@ -76,7 +76,7 @@ $upcoming = Database::fetchAll(
   <div class="card">
     <div class="card-header">
       <span class="card-title">✉️ Recent Messages</span>
-      <a href="messages.php" class="btn btn-secondary" style="font-size:.72rem">View All</a>
+      <a href="messages" class="btn btn-secondary" style="font-size:.72rem">View All</a>
     </div>
     <?php if ($recent_msgs): ?>
     <table>
@@ -98,7 +98,7 @@ $upcoming = Database::fetchAll(
   <div class="card">
     <div class="card-header">
       <span class="card-title">📍 Upcoming Outreach</span>
-      <a href="outreach.php" class="btn btn-secondary" style="font-size:.72rem">View All</a>
+      <a href="outreach" class="btn btn-secondary" style="font-size:.72rem">View All</a>
     </div>
     <?php if ($upcoming): ?>
     <table>
@@ -122,7 +122,7 @@ $upcoming = Database::fetchAll(
 <div class="card" style="margin-top:1.5rem">
   <div class="card-header">
     <span class="card-title">🩺 Recent Screening Registrations</span>
-    <a href="registrations.php" class="btn btn-secondary" style="font-size:.72rem">View All</a>
+    <a href="registrations" class="btn btn-secondary" style="font-size:.72rem">View All</a>
   </div>
   <?php if ($recent_regs): ?>
   <table>
