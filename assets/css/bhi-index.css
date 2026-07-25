@@ -995,7 +995,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
-
+  .footer-brand {}
 
   .footer-logo {
     display: flex;
@@ -2327,6 +2327,10 @@
   .journey-step p { font-size: 0.875rem; color: var(--text-mid); line-height: 1.6; }
 
   /* VISION SECTION */
+  .vision-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); color: white; }
+  .vision-section .section-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
+  .vision-section .section-title { color: white; }
+  .vision-section .section-sub { color: rgba(255,255,255,0.75); }
   .vision-points {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

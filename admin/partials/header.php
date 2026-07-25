@@ -23,6 +23,7 @@ $sb_counts = Database::fetchOne(
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= htmlspecialchars($page_title ?? 'Admin') ?> — BHI Admin</title>
+<link rel="icon" type="image/png" sizes="512x512" href="../../assets/img/bhi-logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--navy:#1B2F6E;--navy-dk:#0f1d47;--red:#C8102E;--gold:#E6A817;--bg:#F7F9FC;--border:#e2e8f0;--txt:#1E293B;--mid:#475569;--light:#94a3b8;--success:#2E8B57}
