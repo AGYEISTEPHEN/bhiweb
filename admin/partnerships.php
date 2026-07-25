@@ -38,6 +38,7 @@ require_once 'partials/header.php';
 <?php if ($msg): ?><div class="alert alert-success"><?= htmlspecialchars($msg) ?></div><?php endif; ?>
 
 <div class="card">
+  <div class="table-wrap">
   <table>
     <thead><tr><th>Organisation</th><th>Contact</th><th>Tier</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
     <tbody>
@@ -64,6 +65,7 @@ require_once 'partials/header.php';
     <?php endforeach; ?>
     </tbody>
   </table>
+  </div>
   <?php if (!$enquiries): ?><p style="color:#94a3b8;text-align:center;padding:2rem">No partnership enquiries yet.</p><?php endif; ?>
   <?php if ($pag['total_pages'] > 1): ?>
   <div style="display:flex;gap:.5rem;justify-content:center;padding:1.25rem 0 0">

@@ -28,6 +28,7 @@ $logs = Database::fetchAll(
 require_once 'partials/header.php';
 ?>
 <div class="card">
+  <div class="table-wrap">
   <table>
     <thead><tr><th>Admin</th><th>Action</th><th>Entity</th><th>Detail</th><th>IP</th><th>Date</th></tr></thead>
     <tbody>
@@ -43,6 +44,7 @@ require_once 'partials/header.php';
     <?php endforeach; ?>
     </tbody>
   </table>
+  </div>
   <?php if (!$logs): ?><p style="color:#94a3b8;text-align:center;padding:2rem">No activity recorded yet.</p><?php endif; ?>
   <?php if ($pag['total_pages'] > 1): ?>
   <div style="display:flex;gap:.5rem;justify-content:center;padding:1.25rem 0 0">

@@ -79,6 +79,7 @@ require_once 'partials/header.php';
 </div>
 
 <div class="card">
+  <div class="table-wrap">
   <table>
     <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Last Login</th><th>Status</th><th></th></tr></thead>
     <tbody>
@@ -102,6 +103,7 @@ require_once 'partials/header.php';
     <?php endforeach; ?>
     </tbody>
   </table>
+  </div>
 </div>
 
 <div id="modal-admin" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9000">

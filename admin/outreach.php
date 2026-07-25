@@ -132,6 +132,7 @@ require_once 'partials/header.php';
 </div>
 
 <div class="card">
+  <div class="table-wrap">
   <table>
     <thead><tr>
       <th>Program</th><th>District</th><th>Type</th><th>Date</th>
@@ -164,6 +165,7 @@ require_once 'partials/header.php';
     <?php endforeach; ?>
     </tbody>
   </table>
+  </div>
   <!-- Pagination -->
   <?php if ($pag['total_pages'] > 1): ?>
   <div style="display:flex;gap:.5rem;justify-content:center;padding:1rem 0">

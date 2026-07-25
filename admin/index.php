@@ -70,7 +70,7 @@ $upcoming = Database::fetchAll(
   </div>
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+<div class="grid-2" style="gap:1.5rem">
 
   <!-- Recent Messages -->
   <div class="card">
@@ -79,6 +79,7 @@ $upcoming = Database::fetchAll(
       <a href="messages" class="btn btn-secondary" style="font-size:.72rem">View All</a>
     </div>
     <?php if ($recent_msgs): ?>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Name</th><th>Type</th><th>Date</th></tr></thead>
       <tbody>
@@ -91,6 +92,7 @@ $upcoming = Database::fetchAll(
       <?php endforeach; ?>
       </tbody>
     </table>
+    </div>
     <?php else: ?><p style="color:#94a3b8;font-size:.9rem">No messages yet.</p><?php endif; ?>
   </div>
 
@@ -101,6 +103,7 @@ $upcoming = Database::fetchAll(
       <a href="outreach" class="btn btn-secondary" style="font-size:.72rem">View All</a>
     </div>
     <?php if ($upcoming): ?>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Program</th><th>District</th><th>Date</th></tr></thead>
       <tbody>
@@ -113,6 +116,7 @@ $upcoming = Database::fetchAll(
       <?php endforeach; ?>
       </tbody>
     </table>
+    </div>
     <?php else: ?><p style="color:#94a3b8;font-size:.9rem">No upcoming programs.</p><?php endif; ?>
   </div>
 
@@ -125,6 +129,7 @@ $upcoming = Database::fetchAll(
     <a href="registrations" class="btn btn-secondary" style="font-size:.72rem">View All</a>
   </div>
   <?php if ($recent_regs): ?>
+  <div class="table-wrap">
   <table>
     <thead><tr><th>Name</th><th>Phone</th><th>District / Community</th><th>Program</th><th>Date</th></tr></thead>
     <tbody>
@@ -139,6 +144,7 @@ $upcoming = Database::fetchAll(
     <?php endforeach; ?>
     </tbody>
   </table>
+  </div>
   <?php else: ?><p style="color:#94a3b8;font-size:.9rem">No registrations yet.</p><?php endif; ?>
 </div>
 

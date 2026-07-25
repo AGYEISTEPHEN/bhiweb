@@ -126,6 +126,7 @@ require_once 'partials/header.php';
 </div>
 
 <div class="card">
+  <div class="table-wrap">
   <table>
     <thead><tr>
       <th>Name</th><th>Phone</th><th>Location</th><th>Risk Factors</th>
@@ -168,6 +169,7 @@ require_once 'partials/header.php';
     <?php endforeach; ?>
     </tbody>
   </table>
+  </div>
   <?php if (!$regs): ?><p style="color:#94a3b8;text-align:center;padding:2rem">No registrations found.</p><?php endif; ?>
 
   <?php if ($pag['total_pages'] > 1): ?>

@@ -100,12 +100,30 @@ $sb_counts = Database::fetchOne(
   textarea.form-control{resize:vertical;min-height:100px}
   .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
   .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem}
+  /* Tables: scroll horizontally within their card instead of breaking page layout */
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .table-wrap table{min-width:560px}
+  .sb-toggle{display:none;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--navy);padding:.3rem .6rem;margin-right:.25rem}
+  .sb-backdrop{display:none;position:fixed;inset:0;background:rgba(15,29,71,.5);z-index:99}
   @media(max-width:900px){.sidebar{width:60px}.sb-logo-text,.sb-section,.sb-link span,.sb-user-name,.sb-logout{display:none}.main{margin-left:60px}}
+  @media(max-width:700px){.grid-2,.grid-3{grid-template-columns:1fr}}
+  @media(max-width:640px){
+    .sb-toggle{display:inline-flex;align-items:center}
+    .sidebar{width:250px;transform:translateX(-100%);transition:transform .25s ease}
+    .sidebar.sb-open{transform:translateX(0)}
+    .sb-logo-text,.sb-section,.sb-link span,.sb-user-name,.sb-logout{display:block}
+    .main{margin-left:0}
+    .topbar{padding:.9rem 1.25rem}
+    .content{padding:1.25rem}
+    .sb-backdrop.sb-open{display:block}
+  }
+  @media(max-width:600px){[id^="modal-"]{padding:1rem}}
 </style>
 </head>
 <body>
 
-<aside class="sidebar">
+<div class="sb-backdrop" id="sb-backdrop" onclick="closeSidebar()"></div>
+<aside class="sidebar" id="sidebar">
   <a href="index" class="sb-logo">
     <div class="sb-logo-icon">
       <img src="../assets/img/bhi-logo.png" alt="BHI logo">
@@ -142,9 +160,22 @@ $sb_counts = Database::fetchOne(
 
 <div class="main">
   <div class="topbar">
-    <h1><?= htmlspecialchars($page_title ?? 'Admin') ?></h1>
+    <div style="display:flex;align-items:center">
+      <button class="sb-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">☰</button>
+      <h1><?= htmlspecialchars($page_title ?? 'Admin') ?></h1>
+    </div>
     <div class="topbar-actions">
       <a href="<?= SITE_URL ?>" target="_blank" class="btn btn-secondary">🌐 View Site</a>
     </div>
   </div>
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('sb-open');
+      document.getElementById('sb-backdrop').classList.toggle('sb-open');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('sb-open');
+      document.getElementById('sb-backdrop').classList.remove('sb-open');
+    }
+  </script>
   <div class="content">

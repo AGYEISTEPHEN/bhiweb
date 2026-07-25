@@ -48,6 +48,7 @@ require_once 'partials/header.php';
   <a href="?export=csv" class="btn btn-success">⬇ Export CSV</a>
 </div>
 <div class="card">
+  <div class="table-wrap">
   <table>
     <thead><tr><th>Email</th><th>Name</th><th>Status</th><th>Source</th><th>Date</th><th></th></tr></thead>
     <tbody>
@@ -70,6 +71,7 @@ require_once 'partials/header.php';
     <?php endforeach; ?>
     </tbody>
   </table>
+  </div>
   <?php if (!$subs): ?><p style="color:#94a3b8;text-align:center;padding:2rem">No subscribers yet.</p><?php endif; ?>
   <?php if ($pag['total_pages'] > 1): ?>
   <div style="display:flex;gap:.5rem;justify-content:center;padding:1.25rem 0 0">
