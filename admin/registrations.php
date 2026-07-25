@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($reg && $reg['program_id']) {
             foreach (['screened' => 'screened_count', 'referred' => 'referred_count'] as $st => $col) {
                 if ($reg['status'] === $st && $status !== $st) {
-                    Database::execute("UPDATE outreach_programs SET $col = GREATEST($col - 1, 0) WHERE id=?", [$reg['program_id']]);
+                    Database::execute("UPDATE outreach_programs SET $col = CASE WHEN $col > 0 THEN $col - 1 ELSE 0 END WHERE id=?", [$reg['program_id']]);
                 } elseif ($reg['status'] !== $st && $status === $st) {
                     Database::execute("UPDATE outreach_programs SET $col = $col + 1 WHERE id=?", [$reg['program_id']]);
                 }
