@@ -29,6 +29,8 @@ define('OUTREACH_PATH', UPLOAD_PATH . '/outreach');
 // ── Upload limits ─────────────────────────────────────────────
 define('MAX_FILE_SIZE',     5 * 1024 * 1024);   // 5 MB
 define('ALLOWED_IMG_TYPES', ['image/jpeg','image/png','image/webp','image/gif']);
+define('ALLOWED_VIDEO_TYPES', ['video/mp4','video/webm','video/quicktime']);
+define('MAX_VIDEO_SIZE',    80 * 1024 * 1024);  // 80 MB
 
 // ── Session ───────────────────────────────────────────────────
 define('SESSION_LIFETIME', 3600 * 8);  // 8 hours
