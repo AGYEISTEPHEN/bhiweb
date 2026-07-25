@@ -8,6 +8,7 @@ define('BHI_VERSION', '1.0.0');
 
 // ── Database ─────────────────────────────────────────────────
 define('DB_HOST',     'localhost');
+define('DB_PORT',     '3306');
 define('DB_NAME',     'bonohear_bhiweb');
 define('DB_USER',     'bonohear_bhisystems');
 define('DB_PASS',     'BHI@2026');
@@ -15,7 +16,7 @@ define('DB_CHARSET',  'utf8mb4');
 
 // ── Site ─────────────────────────────────────────────────────
 define('SITE_NAME',   'Bono Heart Initiative');
-define('SITE_URL',    'http://bonoheartinitiative.org');   // No trailing slash
+define('SITE_URL',    'https://bonoheartinitiative.org');   // No trailing slash
 define('ADMIN_EMAIL', 'admin@bonoheartinitiative.org');
 define('CONTACT_EMAIL','info@bonoheartinitiative.org');
 

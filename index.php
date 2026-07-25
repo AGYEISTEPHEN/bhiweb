@@ -1504,7 +1504,7 @@ $programTypeLabels = [
 
         <div class="pchf-photo-block reveal">
           <img
-            src="assets/img/pchf-zurich-group.jpg"
+            src="assets/img/group.jpeg"
             alt="Participants and faculty of the Postgraduate Course in Heart Failure (PCHF), University Hospital Zurich, Switzerland"
           >
           <div class="pchf-photo-caption">
