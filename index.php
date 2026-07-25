@@ -43,8 +43,8 @@ $programTypeLabels = [
 <meta property="og:description" content="Heart care should not depend on where you live. BHI addresses the full cardio-metabolic-renal continuum — heart, diabetes, kidneys — across the Bono Region, Ghana.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/bhi-index.css">
-<link rel="stylesheet" href="assets/css/bhi-dynamic.css">
+<link rel="stylesheet" href="assets/css/bhi-index.css?v=<?= @filemtime(__DIR__ . '/assets/css/bhi-index.css') ?: BHI_VERSION ?>">
+<link rel="stylesheet" href="assets/css/bhi-dynamic.css?v=<?= @filemtime(__DIR__ . '/assets/css/bhi-dynamic.css') ?: BHI_VERSION ?>">
 </head>
 <body>
 
@@ -1966,7 +1966,7 @@ $programTypeLabels = [
   </div>
 </div>
 
-<script src="assets/js/bhi-main.js"></script>
+<script src="assets/js/bhi-main.js?v=<?= @filemtime(__DIR__ . '/assets/js/bhi-main.js') ?: BHI_VERSION ?>"></script>
 <script>
   // ── Volunteer form ────────────────────────────────────────
   document.getElementById('volunteer-form')?.addEventListener('submit', async (e) => {

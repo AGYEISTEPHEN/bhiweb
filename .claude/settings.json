@@ -31,7 +31,9 @@
       "Bash(git -C /c/xampp/htdocs/bhiweb log -5 --stat --format=\"%H %ci %s\")",
       "Bash(git -C /c/xampp/htdocs/bhiweb fetch origin)",
       "Bash(git -C /c/xampp/htdocs/bhiweb status -sb)",
-      "Bash(gh run *)"
+      "Bash(gh run *)",
+      "Bash(curl -s -m 20 \"http://bonoheartinitiative.org\")",
+      "Bash(git -C /c/xampp/htdocs/bhiweb log -2 --format=\"%H %ci %s\")"
     ]
   }
 }
