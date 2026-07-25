@@ -720,7 +720,6 @@ $programTypeLabels = [
       </p>
     </div>
 
-    <div id="featured-gallery-strip"></div>
 
     <div class="gallery-filter-tabs" id="gallery-filter-tabs"></div>
 
