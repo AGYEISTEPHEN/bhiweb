@@ -16,6 +16,9 @@ if (current_admin()['role'] !== 'superadmin') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (post_size_exceeded()) {
+        die('That request was too large for the server to accept (limit: ' . ini_get('post_max_size') . '). Please try again.');
+    }
     if (!csrf_verify(post('csrf_token'))) {
         die('Invalid session token. Please go back and refresh the page, then try again.');
     }

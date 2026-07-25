@@ -36,6 +36,17 @@ function csrf_verify(string $token): bool {
     return $valid;
 }
 
+/**
+ * True when POST/FILES arrived empty because the request body exceeded
+ * post_max_size — PHP clears both superglobals silently in that case,
+ * which otherwise gets misread downstream as a CSRF failure.
+ */
+function post_size_exceeded(): bool {
+    return $_SERVER['REQUEST_METHOD'] === 'POST'
+        && empty($_POST) && empty($_FILES)
+        && (int) ($_SERVER['CONTENT_LENGTH'] ?? 0) > 0;
+}
+
 // ── Auth ──────────────────────────────────────────────────────
 function is_logged_in(): bool {
     bhi_session_start();
