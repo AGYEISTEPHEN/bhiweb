@@ -16,7 +16,15 @@
       "Bash(curl -s http://127.0.0.1/bhiweb/_phpcheck.php)",
       "Bash(rm -f /c/xampp/htdocs/_phpcheck.php)",
       "Bash(grep -n -i \"bhiweb\\\\|ServerName\\\\|VirtualHost\\\\|php_value\\\\|php_admin_value\" /c/xampp/apache/conf/extra/httpd-vhosts.conf 2>&1)",
-      "Bash(curl -s http://localhost/bhiweb/_phpcheck.php)"
+      "Bash(curl -s http://localhost/bhiweb/_phpcheck.php)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root -e \"SHOW DATABASES;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e ' *)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"SELECT COUNT\\(*\\) FROM outreach_sessions;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"SELECT id,title,status,registration_open,is_published FROM outreach_programs;\")",
+      "Bash(curl -s \"http://localhost/bhiweb/api/outreach.php?action=list&status=all\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root -e \"SELECT user,host FROM mysql.user WHERE user LIKE '%bonohear%' OR user LIKE '%bhi%';\")",
+      "Bash(grep -rn 'bonohear_bhisystems\\\\|DB_PASS\\\\|getenv\\\\|$_ENV' /c/xampp/htdocs/bhiweb/includes/config.php /c/xampp/htdocs/bhiweb/includes/Database.php)",
+      "Bash(php -l \"/c/xampp/htdocs/bhiweb/admin/registrations.php\")"
     ]
   }
 }

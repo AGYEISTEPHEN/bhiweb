@@ -21,6 +21,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (post('action') === 'update_status') {
         $id = (int) post('id');
         $status = clean(post('status'));
+
+        $reg = Database::fetchOne(
+            "SELECT r.status, s.program_id
+             FROM screening_registrations r
+             LEFT JOIN outreach_sessions s ON s.id = r.session_id
+             WHERE r.id = ?",
+            [$id]
+        );
+
+        if ($reg && $reg['program_id']) {
+            foreach (['screened' => 'screened_count', 'referred' => 'referred_count'] as $st => $col) {
+                if ($reg['status'] === $st && $status !== $st) {
+                    Database::execute("UPDATE outreach_programs SET $col = GREATEST($col - 1, 0) WHERE id=?", [$reg['program_id']]);
+                } elseif ($reg['status'] !== $st && $status === $st) {
+                    Database::execute("UPDATE outreach_programs SET $col = $col + 1 WHERE id=?", [$reg['program_id']]);
+                }
+            }
+        }
+
         Database::execute("UPDATE screening_registrations SET status=? WHERE id=?", [$status, $id]);
         log_activity('update_registration_status', 'screening_registrations', $id, $status);
         $msg = 'Status updated.';
