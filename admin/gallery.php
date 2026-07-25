@@ -150,7 +150,7 @@ require_once 'partials/header.php';
   </div>
   <div style="display:flex;gap:.5rem">
     <button class="btn btn-secondary" onclick="openModal('modal-cat')">+ Category</button>
-    <button class="btn btn-primary" onclick="openModal('modal-upload')">+ Upload Images</button>
+    <button class="btn btn-primary" onclick="openModal('modal-upload')">+ Upload Photos / Videos</button>
   </div>
 </div>
 
@@ -204,7 +204,7 @@ require_once 'partials/header.php';
 <div id="modal-upload" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9000;overflow-y:auto">
   <div style="background:#fff;max-width:520px;margin:3rem auto;border-radius:14px;overflow:hidden">
     <div style="background:var(--navy);padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center">
-      <span style="color:#fff;font-family:'Montserrat',sans-serif;font-weight:800">Upload Images</span>
+      <span style="color:#fff;font-family:'Montserrat',sans-serif;font-weight:800">Upload Photos &amp; Videos</span>
       <button onclick="closeModal('modal-upload')" style="background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer">×</button>
     </div>
     <form method="POST" enctype="multipart/form-data" style="padding:1.5rem">
@@ -228,8 +228,12 @@ require_once 'partials/header.php';
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label">Images (multiple allowed — photos or videos)</label>
+        <label class="form-label">Photos or Videos (multiple allowed)</label>
         <input type="file" name="images[]" class="form-control" accept="image/*,video/mp4,video/webm,video/quicktime" multiple required>
+        <div style="font-size:.72rem;color:var(--light);margin-top:.35rem">
+          Images: JPEG, PNG, WebP, GIF — up to <?= (int)(MAX_FILE_SIZE / 1024 / 1024) ?>MB each.
+          Videos: MP4, WebM, MOV — up to <?= (int)(MAX_VIDEO_SIZE / 1024 / 1024) ?>MB each.
+        </div>
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%">Upload</button>
     </form>

@@ -3,7 +3,20 @@
     "allow": [
       "Bash(tasklist //FI \"IMAGENAME eq httpd.exe\")",
       "Bash(tasklist //FI \"IMAGENAME eq mysqld.exe\")",
-      "Bash(php -r \"echo 'post_max_size='.ini_get\\('post_max_size'\\).PHP_EOL; echo 'upload_max_filesize='.ini_get\\('upload_max_filesize'\\).PHP_EOL;\")"
+      "Bash(php -r \"echo 'post_max_size='.ini_get\\('post_max_size'\\).PHP_EOL; echo 'upload_max_filesize='.ini_get\\('upload_max_filesize'\\).PHP_EOL;\")",
+      "Bash(grep -rn \"PHPIniDir\" /c/xampp/apache/conf/ 2>&1)",
+      "Read(//c/xampp/apache/conf//**)",
+      "Bash(grep -rn \"php\" /c/xampp/apache/conf/extra/httpd-xampp.conf 2>&1 | head -50)",
+      "Read(//c/xampp/apache/conf/extra/**)",
+      "Bash(sc query *)",
+      "Bash(wmic process *)",
+      "Bash(echo '<?php echo ini_get\\(\"post_max_size\"\\).\"|\".ini_get\\(\"upload_max_filesize\"\\).\"|\".php_ini_loaded_file\\(\\); ?>')",
+      "Bash(curl -s http://localhost/_phpcheck.php)",
+      "Bash(curl -s http://localhost:8080/_phpcheck.php)",
+      "Bash(curl -s http://127.0.0.1/bhiweb/_phpcheck.php)",
+      "Bash(rm -f /c/xampp/htdocs/_phpcheck.php)",
+      "Bash(grep -n -i \"bhiweb\\\\|ServerName\\\\|VirtualHost\\\\|php_value\\\\|php_admin_value\" /c/xampp/apache/conf/extra/httpd-vhosts.conf 2>&1)",
+      "Bash(curl -s http://localhost/bhiweb/_phpcheck.php)"
     ]
   }
 }
