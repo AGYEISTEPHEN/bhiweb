@@ -719,7 +719,7 @@ $programTypeLabels = [
         outreach days, diagnostic work, and the volunteers who make it all possible.
       </p>
     </div>
-
+<hr><br>
 
     <div class="gallery-filter-tabs" id="gallery-filter-tabs"></div>
 
