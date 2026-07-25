@@ -16,6 +16,16 @@ class Mailer {
         string $html_body,
         string $plain_body = ''
     ): bool {
+        // Some hosts disable the native mail() function entirely for anti-spam
+        // reasons. Calling it then throws an uncatchable-by-@ fatal error, which
+        // would otherwise crash the whole request (DB insert included). Fail
+        // safely instead so the rest of the request (saving to DB, returning a
+        // success response to the user) still completes.
+        if (!function_exists('mail')) {
+            error_log('Mailer::send() — PHP mail() is not available on this server. Email to ' . $to . ' with subject "' . $subject . '" was not sent.');
+            return false;
+        }
+
         $from      = 'noreply@bonoheartinitiative.org';
         $from_name = SITE_NAME;
 
