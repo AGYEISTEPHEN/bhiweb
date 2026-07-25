@@ -44,7 +44,7 @@ switch ($action) {
         $params[] = $pag['offset'];
 
         $images = Database::fetchAll(
-            "SELECT gi.id, gi.filename, gi.alt_text, gi.caption,
+            "SELECT gi.id, gi.filename, gi.media_type, gi.alt_text, gi.caption,
                     gi.width, gi.height, gi.taken_at, gi.is_featured,
                     gc.name AS category_name, gc.slug AS category_slug,
                     op.title AS program_title, op.slug AS program_slug
@@ -87,7 +87,7 @@ switch ($action) {
     case 'featured':
         $limit  = max(4, min(20, (int) get_param('limit', '8')));
         $images = Database::fetchAll(
-            "SELECT gi.id, gi.filename, gi.alt_text, gi.caption,
+            "SELECT gi.id, gi.filename, gi.media_type, gi.alt_text, gi.caption,
                     gc.name AS category_name
              FROM gallery_images gi
              JOIN gallery_categories gc ON gc.id = gi.category_id

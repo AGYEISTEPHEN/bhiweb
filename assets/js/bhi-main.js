@@ -306,7 +306,9 @@ const BHI = {
 
     container.innerHTML = res.data.images.map((img, i) => `
       <div class="gallery-item" onclick="BHI.openLightbox(${i})" data-full="${img.url}" data-caption="${this.esc(img.caption || '')}">
-        <img src="${img.url}" alt="${this.esc(img.alt_text || img.category_name)}" loading="lazy">
+        ${img.media_type === 'video'
+          ? `<video src="${img.url}" muted preload="metadata"></video><span class="gallery-play-badge">▶</span>`
+          : `<img src="${img.url}" alt="${this.esc(img.alt_text || img.category_name)}" loading="lazy">`}
         <div class="gallery-overlay">
           <span>${this.esc(img.category_name)}</span>
         </div>
@@ -368,6 +370,7 @@ const BHI = {
         <button class="bhi-lightbox-close" onclick="BHI.closeLightbox()">×</button>
         <button class="bhi-lightbox-nav prev" onclick="BHI.navLightbox(-1)">‹</button>
         <img class="bhi-lightbox-img" src="">
+        <video class="bhi-lightbox-video" controls style="display:none"></video>
         <p class="bhi-lightbox-caption"></p>
         <button class="bhi-lightbox-nav next" onclick="BHI.navLightbox(1)">›</button>
       `;
@@ -382,7 +385,23 @@ const BHI = {
     const images = this._galleryImages;
     const img = images[this._lightboxIndex];
     const box = document.getElementById('bhi-lightbox');
-    box.querySelector('.bhi-lightbox-img').src = img.url;
+    const imgEl = box.querySelector('.bhi-lightbox-img');
+    const videoEl = box.querySelector('.bhi-lightbox-video');
+
+    // Pause any playing video before switching
+    videoEl.pause();
+    videoEl.removeAttribute('src');
+    videoEl.load();
+
+    if (img.media_type === 'video') {
+      imgEl.style.display = 'none';
+      videoEl.style.display = 'block';
+      videoEl.src = img.url;
+    } else {
+      videoEl.style.display = 'none';
+      imgEl.style.display = 'block';
+      imgEl.src = img.url;
+    }
     box.querySelector('.bhi-lightbox-caption').textContent = img.caption || img.category_name || '';
   },
 
@@ -394,7 +413,11 @@ const BHI = {
 
   closeLightbox() {
     const box = document.getElementById('bhi-lightbox');
-    if (box) box.style.display = 'none';
+    if (box) {
+      box.style.display = 'none';
+      const videoEl = box.querySelector('.bhi-lightbox-video');
+      if (videoEl) videoEl.pause();
+    }
   },
 
   // ── Homepage impact stats (animated counters) ─────────────────
@@ -422,7 +445,9 @@ const BHI = {
 
     container.innerHTML = res.data.images.map(img => `
       <div class="featured-gallery-item">
-        <img src="${img.url}" alt="${this.esc(img.alt_text || '')}" loading="lazy">
+        ${img.media_type === 'video'
+          ? `<video src="${img.url}" muted preload="metadata"></video><span class="gallery-play-badge small">▶</span>`
+          : `<img src="${img.url}" alt="${this.esc(img.alt_text || '')}" loading="lazy">`}
       </div>
     `).join('');
   },

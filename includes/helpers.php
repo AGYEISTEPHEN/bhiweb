@@ -174,6 +174,68 @@ function upload_image(array $file, string $dest_dir, string $prefix = 'img'): ar
     ];
 }
 
+/**
+ * Like upload_image(), but also accepts video files (mp4/webm/mov).
+ * Returns an additional 'media_type' key: 'image' or 'video'.
+ * Videos skip getimagesize() (not applicable) and use MAX_VIDEO_SIZE
+ * as their size ceiling instead of MAX_FILE_SIZE.
+ *
+ * @param  array  $file     $_FILES['field']
+ * @param  string $dest_dir Absolute path to destination directory
+ * @param  string $prefix   Optional filename prefix
+ * @return array  ['success'=>bool, 'filename'=>string, 'media_type'=>string, 'message'=>string]
+ */
+function upload_media(array $file, string $dest_dir, string $prefix = 'gal'): array {
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        return ['success' => false, 'filename' => '', 'media_type' => '', 'message' => 'Upload error code: ' . $file['error']];
+    }
+
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mime  = finfo_file($finfo, $file['tmp_name']);
+    finfo_close($finfo);
+
+    $is_image = in_array($mime, ALLOWED_IMG_TYPES, true);
+    $is_video = in_array($mime, ALLOWED_VIDEO_TYPES, true);
+
+    if (!$is_image && !$is_video) {
+        return ['success' => false, 'filename' => '', 'media_type' => '', 'message' => 'Only JPEG, PNG, WebP, GIF images or MP4, WebM, MOV videos are allowed.'];
+    }
+
+    $size_limit = $is_video ? MAX_VIDEO_SIZE : MAX_FILE_SIZE;
+    if ($file['size'] > $size_limit) {
+        $limit_mb = round($size_limit / (1024 * 1024));
+        return ['success' => false, 'filename' => '', 'media_type' => '', 'message' => "File exceeds {$limit_mb} MB limit."];
+    }
+
+    $ext      = pathinfo($file['name'], PATHINFO_EXTENSION);
+    $filename = $prefix . '_' . bin2hex(random_bytes(8)) . '.' . strtolower($ext);
+    $dest     = rtrim($dest_dir, '/') . '/' . $filename;
+
+    if (!is_dir($dest_dir)) {
+        mkdir($dest_dir, 0755, true);
+    }
+
+    if (!move_uploaded_file($file['tmp_name'], $dest)) {
+        return ['success' => false, 'filename' => '', 'media_type' => '', 'message' => 'Could not save file.'];
+    }
+
+    $width = $height = null;
+    if ($is_image) {
+        $dims   = @getimagesize($dest);
+        $width  = $dims[0] ?? null;
+        $height = $dims[1] ?? null;
+    }
+
+    return [
+        'success'    => true,
+        'filename'   => $filename,
+        'media_type' => $is_video ? 'video' : 'image',
+        'width'      => $width,
+        'height'     => $height,
+        'message'    => 'Upload successful.',
+    ];
+}
+
 // ── Token generator ──────────────────────────────────────────
 function generate_token(int $length = 32): string {
     return bin2hex(random_bytes($length));

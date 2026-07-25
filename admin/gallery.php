@@ -26,26 +26,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $taken_at = clean(post('taken_at')) ?: null;
 
         if (empty($_FILES['image']['name'])) {
-            $err = 'Please choose an image to upload.';
+            $err = 'Please choose an image or video to upload.';
         } else {
-            $upload = upload_image($_FILES['image'], GALLERY_PATH, 'gal');
+            $upload = upload_media($_FILES['image'], GALLERY_PATH, 'gal');
             if (!$upload['success']) {
                 $err = $upload['message'];
             } else {
                 Database::execute(
                   "INSERT INTO gallery_images
-                   (category_id, program_id, filename, original_name, alt_text, caption,
+                   (category_id, program_id, filename, media_type, original_name, alt_text, caption,
                     file_size, width, height, is_featured, uploaded_by, taken_at)
-                   VALUES (:c,:p,:f,:on,:a,:cap,:fs,:w,:h,:fe,:ub,:ta)",
+                   VALUES (:c,:p,:f,:mt,:on,:a,:cap,:fs,:w,:h,:fe,:ub,:ta)",
                   [
-                    'c'=>$cat_id,'p'=>$prog_id,'f'=>$upload['filename'],
+                    'c'=>$cat_id,'p'=>$prog_id,'f'=>$upload['filename'],'mt'=>$upload['media_type'],
                     'on'=>$_FILES['image']['name'],'a'=>$alt,'cap'=>$caption,
                     'fs'=>$_FILES['image']['size'],'w'=>$upload['width'],'h'=>$upload['height'],
                     'fe'=>$featured,'ub'=>current_admin()['id'],'ta'=>$taken_at
                   ]
                 );
                 log_activity('upload_image', 'gallery_images', Database::lastId());
-                $msg = 'Image uploaded successfully.';
+                $msg = ucfirst($upload['media_type']) . ' uploaded successfully.';
             }
         }
     }
@@ -64,13 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'error'    => $_FILES['images']['error'][$i],
                     'size'     => $_FILES['images']['size'][$i],
                 ];
-                $upload = upload_image($file, GALLERY_PATH, 'gal');
+                $upload = upload_media($file, GALLERY_PATH, 'gal');
                 if ($upload['success']) {
                     Database::execute(
                       "INSERT INTO gallery_images
-                       (category_id, program_id, filename, original_name, width, height, uploaded_by)
-                       VALUES (?,?,?,?,?,?,?)",
-                      [$cat_id, $prog_id, $upload['filename'], $file['name'],
+                       (category_id, program_id, filename, media_type, original_name, width, height, uploaded_by)
+                       VALUES (?,?,?,?,?,?,?,?)",
+                      [$cat_id, $prog_id, $upload['filename'], $upload['media_type'], $file['name'],
                        $upload['width'], $upload['height'], current_admin()['id']]
                     );
                     $count++;
@@ -156,8 +156,14 @@ require_once 'partials/header.php';
     <?php foreach ($images as $img): ?>
       <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
         <div style="aspect-ratio:4/3;background:#f1f5f9;overflow:hidden;position:relative">
-          <img src="<?= SITE_URL ?>/uploads/gallery/<?= htmlspecialchars($img['filename']) ?>"
-               style="width:100%;height:100%;object-fit:cover" loading="lazy">
+          <?php if (($img['media_type'] ?? 'image') === 'video'): ?>
+            <video src="<?= SITE_URL ?>/uploads/gallery/<?= htmlspecialchars($img['filename']) ?>"
+                   style="width:100%;height:100%;object-fit:cover" muted preload="metadata"></video>
+            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#fff;background:rgba(0,0,0,.15);pointer-events:none">▶</span>
+          <?php else: ?>
+            <img src="<?= SITE_URL ?>/uploads/gallery/<?= htmlspecialchars($img['filename']) ?>"
+                 style="width:100%;height:100%;object-fit:cover" loading="lazy">
+          <?php endif; ?>
           <?php if ($img['is_featured']): ?>
             <span style="position:absolute;top:6px;right:6px;background:var(--gold);color:#fff;font-size:.6rem;font-weight:700;padding:.15rem .5rem;border-radius:50px">★ Featured</span>
           <?php endif; ?>
@@ -219,8 +225,8 @@ require_once 'partials/header.php';
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label">Images (multiple allowed)</label>
-        <input type="file" name="images[]" class="form-control" accept="image/*" multiple required>
+        <label class="form-label">Images (multiple allowed — photos or videos)</label>
+        <input type="file" name="images[]" class="form-control" accept="image/*,video/mp4,video/webm,video/quicktime" multiple required>
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%">Upload</button>
     </form>
