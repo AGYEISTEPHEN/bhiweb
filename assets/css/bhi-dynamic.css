@@ -220,4 +220,8 @@
 @media (max-width: 600px) {
   .bhi-section { padding: 4rem 1.25rem; }
   #outreach-programs-grid { grid-template-columns: 1fr; }
+  #bhi-screening-modal { padding: 0; align-items: flex-end; }
+  .bhi-modal-box { max-width: none; border-radius: 16px 16px 0 0; max-height: 92vh; }
+  .bhi-modal-header { padding: 1.1rem 1.25rem; }
+  .bhi-modal-body { padding: 1.25rem; }
 }

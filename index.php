@@ -58,22 +58,23 @@ $programTypeLabels = [
       <span>Cardio-Metabolic-Renal Care for All</span>
     </div>
   </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#cmr">CMR Disease</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#outreach">Outreach</a></li>
-    <li><a href="#field">Gallery</a></li>
-    <li><a href="#partners">Partners</a></li>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" onclick="BHI.toggleNav()">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" onclick="BHI.closeNav()">About</a></li>
+    <li><a href="#cmr" onclick="BHI.closeNav()">CMR Disease</a></li>
+    <li><a href="#services" onclick="BHI.closeNav()">Services</a></li>
+    <li><a href="#impact" onclick="BHI.closeNav()">Impact</a></li>
+    <li><a href="#outreach" onclick="BHI.closeNav()">Outreach</a></li>
+    <li><a href="#field" onclick="BHI.closeNav()">Gallery</a></li>
+    <li><a href="#partners" onclick="BHI.closeNav()">Partners</a></li>
     <li>
       <div class="nav-page-tabs">
-        <button class="nav-page-tab active" id="tab-home" onclick="switchPage('home')">Home</button>
-        <button class="nav-page-tab" id="tab-education" onclick="switchPage('education')">CMR Education</button>
-        <button class="nav-page-tab" id="tab-founder" onclick="switchPage('founder')">Meet the Founder</button>
+        <button class="nav-page-tab active" id="tab-home" onclick="switchPage('home'); BHI.closeNav()">Home</button>
+        <button class="nav-page-tab" id="tab-education" onclick="switchPage('education'); BHI.closeNav()">CMR Education</button>
+        <button class="nav-page-tab" id="tab-founder" onclick="switchPage('founder'); BHI.closeNav()">Meet the Founder</button>
       </div>
     </li>
-    <li><a href="#outreach" class="nav-cta" onclick="document.getElementById('outreach')?.scrollIntoView({behavior:'smooth'});">Get Screened</a></li>
+    <li><a href="#outreach" class="nav-cta" onclick="document.getElementById('outreach')?.scrollIntoView({behavior:'smooth'}); BHI.closeNav();">Get Screened</a></li>
   </ul>
 </nav>
 

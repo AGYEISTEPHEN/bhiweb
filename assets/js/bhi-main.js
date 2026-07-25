@@ -459,6 +459,27 @@ const BHI = {
     return div.innerHTML;
   },
 
+  // ============================================================
+  // MOBILE NAV
+  // ============================================================
+  toggleNav() {
+    const links  = document.getElementById('nav-links');
+    const toggle = document.getElementById('nav-toggle');
+    if (!links || !toggle) return;
+    const open = links.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.textContent = open ? '✕' : '☰';
+  },
+
+  closeNav() {
+    const links  = document.getElementById('nav-links');
+    const toggle = document.getElementById('nav-toggle');
+    if (!links || !toggle) return;
+    links.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = '☰';
+  },
+
   // ── Init everything ──────────────────────────────────────────
   init() {
     this.initNewsletterForms();
@@ -474,9 +495,9 @@ const BHI = {
     if (document.getElementById('impact-stats-grid'))       this.loadImpactStats();
     if (document.getElementById('featured-gallery-strip'))  this.loadFeaturedGallery();
 
-    // ESC key closes lightbox / modal
+    // ESC key closes lightbox / modal / mobile nav
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { this.closeLightbox(); this.closeScreeningModal(); }
+      if (e.key === 'Escape') { this.closeLightbox(); this.closeScreeningModal(); this.closeNav(); }
     });
   },
 };
