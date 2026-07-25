@@ -840,7 +840,7 @@ $programTypeLabels = [
       <p>All partner contributions are acknowledged in writing. BHI commits to annual impact reporting — showing exactly what your investment achieved.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
         <a href="#partner-form" class="btn-primary" onclick="document.getElementById('partner-form').scrollIntoView({behavior:'smooth'})">Partner With BHI</a>
-        <a href="/strategic-plan" class="btn-secondary" style="color:var(--navy); border-color:var(--navy);">View Strategic Plan 2026–2028</a>
+        <a href="#" onclick="switchPage('strategic-plan'); return false;" class="btn-secondary" style="color:var(--navy); border-color:var(--navy);">View Strategic Plan 2026–2028</a>
       </div>
     </div>
 
@@ -1059,9 +1059,9 @@ $programTypeLabels = [
       <h4>Get Involved</h4>
       <a href="#outreach">Get Screened</a>
       <a href="#partners">Partner With Us</a>
-      <a href="/volunteer">Volunteer</a>
-      <a href="/refer">Refer a Patient</a>
-      <a href="/strategic-plan">Strategic Plan</a>
+      <a href="#" onclick="switchPage('volunteer'); return false;">Volunteer</a>
+      <a href="#" onclick="switchPage('refer'); return false;">Refer a Patient</a>
+      <a href="#" onclick="switchPage('strategic-plan'); return false;">Strategic Plan</a>
     </div>
     <div class="footer-col">
       <h4>Stay Informed</h4>
@@ -1649,6 +1649,252 @@ $programTypeLabels = [
 </footer>
 </div>
 
+<!-- VOLUNTEER PAGE -->
+<div class="page" id="page-volunteer">
+<section class="sub-hero">
+  <div class="section-tag">Get Involved</div>
+  <h1>Give a Saturday.<br>Help save a heart.</h1>
+  <p>BHI's screening days run on volunteers — registering families, guiding them through the process,
+     and keeping the day organised so our clinical team can focus on care. No medical background required
+     for most roles; just time, reliability, and a heart for your community.</p>
+</section>
+
+<section class="bhi-section">
+  <div class="bhi-container">
+    <div class="text-center">
+      <div class="section-tag">Where You Fit</div>
+      <h2 class="section-title">Four ways to help on screening day.</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">Pick the role that matches your skills and availability — most volunteers work a single outreach day at a time, no long-term commitment required.</p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card">
+        <div class="ico">📋</div>
+        <h3>Registration &amp; Language Support</h3>
+        <p>Welcome community members, help them complete registration forms, and translate between English, Twi, and local dialects where needed.</p>
+      </div>
+      <div class="role-card">
+        <div class="ico">📣</div>
+        <h3>Community Mobilization</h3>
+        <p>Work with local leaders and community information centres in the days before an outreach to spread the word and answer questions.</p>
+      </div>
+      <div class="role-card">
+        <div class="ico">🗂️</div>
+        <h3>Data &amp; Records</h3>
+        <p>Support the team entering screening results into the registry accurately, and help track referrals through to follow-up.</p>
+      </div>
+      <div class="role-card">
+        <div class="ico">🩺</div>
+        <h3>Clinical Support</h3>
+        <p>For nurses, clinical students, and allied health workers — assist with vitals, echo setup, and patient flow under supervision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bhi-section alt">
+  <div class="bhi-container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <div class="section-tag">Sign Up</div>
+      <h2 class="section-title">Tell us about yourself.</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">We'll be in touch about upcoming outreach dates that match your role and location.</p>
+    </div>
+    <div class="bhi-small-form-wrap">
+      <form id="volunteer-form">
+        <div class="form-row">
+          <div class="fg"><label>Full Name</label><input type="text" name="full_name" required></div>
+          <div class="fg"><label>Phone Number</label><input type="tel" name="phone" required></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="fg"><label>District / Community</label><input type="text" name="community" required></div>
+        </div>
+        <div class="fg">
+          <label>Preferred Role</label>
+          <select name="role" required>
+            <option value="">Select a role</option>
+            <option value="Registration & Language Support">Registration &amp; Language Support</option>
+            <option value="Community Mobilization">Community Mobilization</option>
+            <option value="Data & Records">Data &amp; Records</option>
+            <option value="Clinical Support">Clinical Support (health workers &amp; students)</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Why would you like to volunteer with BHI?</label>
+          <textarea name="note" required minlength="20" placeholder="A sentence or two is fine."></textarea>
+        </div>
+        <button type="submit" class="bhi-small-submit">Submit Application →</button>
+      </form>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- REFER A PATIENT PAGE -->
+<div class="page" id="page-refer">
+<section class="sub-hero red-tag">
+  <div class="section-tag">Clinical Pathway</div>
+  <h1>Refer a patient into<br>CMR care.</h1>
+  <p>If you're a community health worker, nurse, clinician, or community member who has seen someone
+     showing early cardio-metabolic-renal warning signs, refer them here — our team will follow up
+     directly and connect them to the nearest screening or diagnostic pathway.</p>
+</section>
+
+<div class="urgent-banner">
+  <span style="font-size:1.4rem">⚠️</span>
+  <span><strong>For an urgent or emergency case</strong>, don't wait for a form response —
+  call or WhatsApp us directly at <a href="tel:+233243255462">+233 243 255 462</a>.</span>
+</div>
+
+<section class="bhi-section" style="padding-top:0">
+  <div class="bhi-container">
+    <div class="text-center">
+      <div class="section-tag">When to Refer</div>
+      <h2 class="section-title">Any of these warning signs is reason enough.</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">BHI screens across the full cardio-metabolic-renal continuum — a patient doesn't need a confirmed diagnosis to be referred, only a reasonable concern.</p>
+    </div>
+    <div class="flag-strip">
+      <div class="flag-chip"><span class="ico">🫀</span> Obesity / high BMI</div>
+      <div class="flag-chip"><span class="ico">🩸</span> Insulin resistance</div>
+      <div class="flag-chip"><span class="ico">💉</span> Diabetes symptoms</div>
+      <div class="flag-chip"><span class="ico">📈</span> High blood pressure</div>
+      <div class="flag-chip"><span class="ico">🫘</span> Signs of kidney disease</div>
+      <div class="flag-chip"><span class="ico">💔</span> Heart failure symptoms</div>
+      <div class="flag-chip"><span class="ico">🧠</span> Stroke history / risk</div>
+    </div>
+  </div>
+</section>
+
+<section class="bhi-section alt">
+  <div class="bhi-container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <div class="section-tag">Referral Form</div>
+      <h2 class="section-title">Tell us about the patient.</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">A member of our team will reach out to arrange screening or a specialist appointment.</p>
+    </div>
+    <div class="bhi-small-form-wrap">
+      <form id="refer-form">
+        <div class="form-row">
+          <div class="fg"><label>Your Name</label><input type="text" name="full_name" required></div>
+          <div class="fg">
+            <label>Your Role</label>
+            <select name="referrer_role" required>
+              <option value="">Select role</option>
+              <option value="Community Health Worker">Community Health Worker</option>
+              <option value="Nurse">Nurse</option>
+              <option value="Doctor / Clinician">Doctor / Clinician</option>
+              <option value="Community Member">Community Member</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Your Phone Number</label><input type="tel" name="phone" required></div>
+          <div class="fg"><label>Your Email (optional)</label><input type="email" name="email"></div>
+        </div>
+        <div class="divider-label">Patient Details</div>
+        <div class="form-row">
+          <div class="fg"><label>Patient's Name</label><input type="text" name="patient_name" required></div>
+          <div class="fg"><label>Patient's Phone Number</label><input type="tel" name="patient_phone" required></div>
+        </div>
+        <div class="fg"><label>Patient's District / Community</label><input type="text" name="patient_community" required></div>
+        <div class="fg">
+          <label>Reason for Referral</label>
+          <textarea name="reason" required minlength="20" placeholder="Describe the symptoms or concern that prompted this referral."></textarea>
+        </div>
+        <button type="submit" class="bhi-small-submit">Submit Referral →</button>
+      </form>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- STRATEGIC PLAN PAGE -->
+<div class="page" id="page-strategic-plan">
+<section class="sub-hero">
+  <div class="section-tag">CMR Strategic Plan 2026–2028</div>
+  <h1>Three years.<br>One system. Built to last.</h1>
+  <p>BHI operates a formal, board-governed strategic plan — not a series of one-off outreach days.
+     Here's what we've already put in place, and what the next two years are built to deliver.</p>
+</section>
+
+<section class="bhi-section">
+  <div class="bhi-container">
+    <div class="text-center">
+      <div class="section-tag">Roadmap</div>
+      <h2 class="section-title">Year by year.</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="plan-timeline">
+      <div class="plan-year">
+        <div class="plan-year-badge">'26</div>
+        <div class="plan-year-body">
+          <h3>Foundation Year</h3>
+          <ul>
+            <li>Formal governance structure established — board-level oversight, clinical advisory input, and financial accountability from the outset.</li>
+            <li>Longitudinal CMR registry architecture developed, so every patient is tracked from first contact through final outcome.</li>
+            <li>Community-focused delivery model built around outreach days, not fixed clinic visits.</li>
+            <li>First community screening, diagnostic, and referral cycles run across the Bono Region.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-year">
+        <div class="plan-year-badge">'27</div>
+        <div class="plan-year-body">
+          <h3>Scale &amp; Systematize</h3>
+          <ul>
+            <li>Expand screening coverage to additional districts and community partners across the region.</li>
+            <li>Grow the referral network with district and regional health facilities to shorten time-to-treatment.</li>
+            <li>Publish first registry-derived findings to inform regional CMR policy and planning.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-year">
+        <div class="plan-year-badge">'28</div>
+        <div class="plan-year-body">
+          <h3>Long-Term Sustainability</h3>
+          <ul>
+            <li>Diversified, sustainable funding base spanning partnerships, grants, and community support.</li>
+            <li>A documented, replicable CMR model other regions in Ghana can adopt.</li>
+            <li>Local capacity built so the system continues to run independent of any single individual.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bhi-section alt">
+  <div class="bhi-container">
+    <div class="text-center">
+      <div class="section-tag">What We're Scaling</div>
+      <h2 class="section-title">The five pillars this plan is built around.</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="pillar-recap">
+      <div class="pillar-recap-item"><div class="ico">🩺</div><span>Community Screening</span></div>
+      <div class="pillar-recap-item"><div class="ico">💙</div><span>Precision Diagnostics</span></div>
+      <div class="pillar-recap-item"><div class="ico">🧪</div><span>Renal &amp; Metabolic Detection</span></div>
+      <div class="pillar-recap-item"><div class="ico">🔄</div><span>Referral Coordination</span></div>
+      <div class="pillar-recap-item"><div class="ico">📢</div><span>Advocacy &amp; Education</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bhi-section" style="text-align:center">
+  <div class="bhi-container">
+    <div class="prospectus-cta">
+      <h3>Want the full plan and partnership terms?</h3>
+      <p>Reach out to our partnerships team and we'll share the detailed strategic plan and prospectus directly.</p>
+      <a href="#" class="btn-primary" onclick="switchPage('home'); setTimeout(()=>document.getElementById('partners')?.scrollIntoView({behavior:'smooth'}), 150); return false;">Get in Touch →</a>
+    </div>
+  </div>
+</section>
+</div>
+
 <a href="https://wa.me/233243255462" class="whatsapp-float" target="_blank" aria-label="WhatsApp BHI">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -1722,8 +1968,64 @@ $programTypeLabels = [
 
 <script src="assets/js/bhi-main.js"></script>
 <script>
+  // ── Volunteer form ────────────────────────────────────────
+  document.getElementById('volunteer-form')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const btn  = form.querySelector('button[type="submit"]');
+    const raw  = new FormData(form);
+
+    const fd = new FormData();
+    fd.set('full_name', raw.get('full_name'));
+    fd.set('email', raw.get('email'));
+    fd.set('phone', raw.get('phone'));
+    fd.set('enquiry_type', 'volunteer');
+    fd.set('subject', 'Volunteer Application — ' + raw.get('role'));
+    fd.set('message',
+      'Preferred role: ' + raw.get('role') + '\n' +
+      'District/Community: ' + raw.get('community') + '\n\n' +
+      raw.get('note')
+    );
+
+    BHI.setLoading(btn, true, 'Submitting...');
+    const res = await BHI.post('contact.php', fd);
+    BHI.setLoading(btn, false);
+    BHI.toast(res.message, res.success ? 'success' : 'error');
+    if (res.success) form.reset();
+    else if (res.data && res.data.errors) BHI.showFieldErrors(form, res.data.errors);
+  });
+
+  // ── Refer a patient form ──────────────────────────────────
+  document.getElementById('refer-form')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const btn  = form.querySelector('button[type="submit"]');
+    const raw  = new FormData(form);
+
+    const fd = new FormData();
+    fd.set('full_name', raw.get('full_name'));
+    fd.set('email', raw.get('email') || '');
+    fd.set('phone', raw.get('phone'));
+    fd.set('enquiry_type', 'referral');
+    fd.set('subject', 'Patient Referral — ' + raw.get('patient_name'));
+    fd.set('message',
+      'Referring person role: ' + raw.get('referrer_role') + '\n\n' +
+      'Patient name: ' + raw.get('patient_name') + '\n' +
+      'Patient phone: ' + raw.get('patient_phone') + '\n' +
+      'Patient district/community: ' + raw.get('patient_community') + '\n\n' +
+      'Reason for referral:\n' + raw.get('reason')
+    );
+
+    BHI.setLoading(btn, true, 'Submitting...');
+    const res = await BHI.post('contact.php', fd);
+    BHI.setLoading(btn, false);
+    BHI.toast(res.message, res.success ? 'success' : 'error');
+    if (res.success) form.reset();
+    else if (res.data && res.data.errors) BHI.showFieldErrors(form, res.data.errors);
+  });
+
   // Page switching
-  const pages = ['home', 'education', 'founder'];
+  const pages = ['home', 'education', 'founder', 'volunteer', 'refer', 'strategic-plan'];
   
   function switchPage(name) {
     if (!pages.includes(name)) return;
