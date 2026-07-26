@@ -1052,6 +1052,36 @@
 
   .footer-contact a:hover { color: white; }
 
+  .footer-social {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.1rem;
+  }
+
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .footer-social a:hover {
+    background: var(--red);
+    transform: translateY(-2px);
+  }
+
+  .footer-social svg {
+    width: 17px;
+    height: 17px;
+    fill: rgba(255,255,255,0.85);
+  }
+
+  .footer-social a:hover svg { fill: white; }
+
   .footer-col h4 {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;

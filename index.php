@@ -1037,6 +1037,11 @@ $programTypeLabels = [
         <a href="tel:+233597201858">📞 +233 597 201 858</a>
         <a href="https://wa.me/233597201858">💬 WhatsApp Dr. Bediako Mensah</a>
       </div>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@bono_heart_initiative" target="_blank" rel="noopener" aria-label="BHI on TikTok">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 5.82c-1.36-1.57-1.44-1.48-1.44-1.48h-3.09v12.4c0 1.43-1.16 2.6-2.6 2.6a2.6 2.6 0 0 1-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V11.1c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.24s-1.88.09-3.24-1.48z"/></svg>
+        </a>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
