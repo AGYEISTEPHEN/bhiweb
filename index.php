@@ -118,9 +118,9 @@ $programTypeLabels = [
       <h2 class="section-title">Cardio-Metabolic-Renal disease is Ghana's silent crisis.</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
-        Hypertension. Diabetes. Obesity. Heart failure. Chronic kidney disease. These conditions do not
-        arrive separately — they form one interconnected disease continuum, and most people do not know
-        they are on it until it is too late.
+        Hypertension. Diabetes. Obesity. Heart failure. Chronic kidney disease. These rarely show up
+        alone — most of the time they're stages of one continuum, and people don't find out they're
+        on it until it's too late.
       </p>
     </div>
     <div class="stat-cards reveal">
@@ -186,7 +186,7 @@ $programTypeLabels = [
       </div>
     </div>
     <div class="bono-closing reveal">
-      "BHI is not filling a gap. It is building a Cardio-Metabolic-Renal system that has never existed in this region."
+      "There's no Cardio-Metabolic-Renal system here to plug into. BHI is building the first one this region has ever had."
     </div>
   </div>
 </section>
@@ -216,7 +216,7 @@ $programTypeLabels = [
         <h2 class="section-title">"Every community deserves access to heart care."</h2>
         <div class="section-divider"></div>
         <p class="founder-body">
-          Bono Heart Initiative was born from a journey that crossed communities, countries, and healthcare systems — but always returned to one central question: why should access to specialist care depend on geography?
+          Bono Heart Initiative grew out of one question that followed its founder across three countries and just as many health systems: why should the quality of your heart care depend on where you happen to live?
         </p>
         <p class="founder-body">
           Its founder, Dr. Edward Bediako Mensah, began his medical training at the <strong>Latin American School of Medicine (ELAM) in Cuba</strong> — a globally recognised institution founded on the principles of equity, prevention, and service to underserved communities. At ELAM, physicians were taught to engage communities directly, identify disease early, and bring care closer to those who needed it most.
@@ -231,7 +231,7 @@ $programTypeLabels = [
           His training is currently being further deepened through the <strong>Postgraduate Course in Heart Failure (PCHF) at University Hospital Zurich</strong> — with the Certificate of Advanced Studies (CAS) expected in 2027 — where he is learning how sustainable cardiovascular systems are built through registries, outcomes measurement, and implementation science.
         </p>
         <p class="founder-body">
-          Bono Heart Initiative is the convergence of all three experiences: the community philosophy of ELAM, the specialist expertise of Cardiocentro, and the systems thinking of Zurich. Together, one mission.
+          Bono Heart Initiative draws on all three of those experiences — ELAM's grounding in community medicine, the specialist training from Cardiocentro, and the systems-building lessons still coming out of Zurich.
         </p>
         <p class="founder-body" style="font-weight:600; color:var(--navy);">
           BHI exists because specialist heart care should not be a privilege reserved for major cities. It should be accessible to every community.
@@ -249,12 +249,12 @@ $programTypeLabels = [
   <div class="container">
     <div class="text-center">
       <div class="section-tag">What Is CMR Disease?</div>
-      <h2 class="section-title">Cardio-Metabolic-Renal Disease.<br>One continuum. One patient. One system.</h2>
+      <h2 class="section-title">Cardio-Metabolic-Renal Disease:<br>the heart, metabolism, and kidneys — one system</h2>
       <div class="section-divider" style="background:rgba(255,255,255,0.3); margin:1.25rem auto"></div>
       <p class="section-sub" style="color:rgba(255,255,255,0.78); margin:0 auto;">
-        Cardio-Metabolic-Renal (CMR) disease is not three separate problems. It is a single
-        interconnected continuum in which the heart, metabolism, and kidneys fail together —
-        each accelerating the damage in the others.
+        Cardio-Metabolic-Renal (CMR) disease isn't three separate problems that happen to occur
+        in the same patient. The heart, metabolism, and kidneys break down together — each one
+        making the others worse.
       </p>
     </div>
 
@@ -329,22 +329,20 @@ $programTypeLabels = [
     <div class="cmr-philosophy reveal">
       <div class="cmr-philosophy-label">Our Clinical Philosophy</div>
       <p class="cmr-philosophy-statement">
-        BHI was founded on a single conviction: that Cardio-Metabolic-Renal disease is the greatest
-        non-communicable disease challenge facing the Bono Region — and that it has never been
-        addressed as the unified continuum it truly is.
+        Cardio-Metabolic-Renal disease is the biggest non-communicable health problem facing the
+        Bono Region, and no one has ever treated it as the single continuum it actually is. That's
+        the gap BHI was founded to close.
       </p>
       <p class="cmr-philosophy-body">
         Hypertension, diabetes, obesity, chronic kidney disease, heart failure, and stroke are
-        routinely treated as separate conditions — by separate specialists, in separate clinics,
-        with separate funding streams. BHI recognises them as what they actually are: manifestations
-        of one interconnected disease process, in which each condition accelerates the others.
+        usually handled as unrelated conditions — different specialists, different clinics,
+        different funding lines. In reality, they're stages of the same disease process, each one
+        feeding the next.
       </p>
       <div class="cmr-philosophy-divider"></div>
       <p class="cmr-philosophy-core">
-        The Cardio-Metabolic-Renal continuum is not one of BHI's programme areas.
-        It is the clinical framework upon which every BHI activity is built — screening,
-        education, outreach, registry development, referral pathways, research, and policy advocacy.
-        Everything BHI does begins and ends with CMR.
+        Every part of BHI works through that lens. Screening, education, outreach, registry-building,
+        referrals, research, and policy work all trace back to the same starting point: CMR.
       </p>
     </div>
 
@@ -377,7 +375,7 @@ $programTypeLabels = [
       <div class="trust-card">
         <div class="trust-icon">🌱</div>
         <h3>Long-Term Sustainability Roadmap</h3>
-        <p>BHI is designed to outlast its founders. The registry generates research. Research generates grants. Grants sustain the programme. Outcomes drive policy. Policy changes the system permanently.</p>
+        <p>BHI is built to outlast its founders. Registry data feeds research, research attracts grants, and grants keep the programme running — with outcomes strong enough, over time, to shift policy.</p>
       </div>
     </div>
   </div>
@@ -388,7 +386,7 @@ $programTypeLabels = [
   <div class="container">
     <div class="text-center">
       <div class="section-tag">How BHI Works</div>
-      <h2 class="section-title">Two Tiers. One Mission.</h2>
+      <h2 class="section-title">From Community Screening to Specialist Follow-Up</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
         BHI's clinical model was designed for one purpose: reaching the people who need
@@ -441,7 +439,7 @@ $programTypeLabels = [
   <div class="container">
     <div class="text-center">
       <div class="section-tag">What We Do</div>
-      <h2 class="section-title">Five pillars. One CMR system.</h2>
+      <h2 class="section-title">What BHI Actually Does</h2>
       <div class="section-divider"></div>
     </div>
     <div class="pillars reveal">
@@ -497,7 +495,7 @@ $programTypeLabels = [
         When your kidneys are stressed, they can no longer remove waste efficiently — and the pressure backs up through the whole system.
         Eventually, the unit overheats. That is heart failure. That is stroke. That is end-stage kidney disease.
         <br><br>
-        <strong>The good news:</strong> you can service the system before it breaks. That is exactly what BHI is here to do.
+        <strong>The good news:</strong> you can service the system before it breaks — that's exactly what BHI does.
       </p>
       <div class="ac-stages">
         <div class="ac-stage">
@@ -534,7 +532,7 @@ $programTypeLabels = [
   <div class="container">
     <div class="text-center">
       <div class="section-tag">The BHI Registry</div>
-      <h2 class="section-title">We Don't Just Screen. We Remember.</h2>
+      <h2 class="section-title">Every Patient Stays on Record</h2>
       <div class="section-divider" style="background:rgba(255,255,255,0.3); margin:1.25rem auto"></div>
       <p class="section-sub">
         Most outreach programmes screen on the day and disappear. BHI maintains a
@@ -596,8 +594,8 @@ $programTypeLabels = [
       <h2 class="section-title">Building a cardiovascular system<br>for the Bono Region.</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
-        BHI is not a one-off outreach programme. It is a structured, long-term regional health system
-        — being built one district, one registry entry, and one referral at a time.
+        BHI works district by district, one registry entry and one referral at a time — this isn't
+        a one-off outreach programme, it's a regional health system taking permanent shape.
       </p>
     </div>
     <div class="roadmap-timeline reveal">
@@ -641,8 +639,8 @@ $programTypeLabels = [
       <h2 class="section-title">Year 1 Targets — 2026</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
-        Every number represents a life reached, a diagnosis made, a referral completed.
-        Live data will update this dashboard as our first outreach cycles are completed.
+        Behind every number is a person reached, a diagnosis made, or a referral followed through.
+        This dashboard updates as our first outreach cycles wrap up.
       </p>
     </div>
     <div class="impact-numbers reveal">
@@ -739,9 +737,9 @@ $programTypeLabels = [
       <h2 class="section-title">Invest in the Bono Region's CMR Health.</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
-        BHI is not asking for charity. We are offering a structured investment in the
-        cardio-metabolic-renal health of 1.2 million people — with transparent reporting,
-        named impact, and quarterly accountability.
+        This is an investment in the cardio-metabolic-renal health of 1.2 million people, not a
+        charity donation — you get full reporting, named impact, and a quarterly account of
+        exactly what your money did.
       </p>
     </div>
     <div class="tiers-grid reveal">
@@ -943,10 +941,9 @@ $programTypeLabels = [
   <div class="container">
     <h2>Every heartbeat matters.<br><em>Every community deserves a fighting chance.</em></h2>
     <p>
-      Whether you are a farmer in Dormaa, a teacher in Berekum, or a child growing up in Jaman North —
-      your heart deserves the same care as anyone in Accra or Kumasi.
-      The doctor should be willing to come to you. Prevention should happen before disease becomes irreversible.
-      Distance should not determine diagnosis.
+      A farmer in Dormaa. A teacher in Berekum. A child growing up in Jaman North.
+      Their hearts deserve the same care as anyone in Accra or Kumasi — which means the doctor
+      comes to them, and problems get caught while they're still fixable, not after.
     </p>
     <div class="closing-ctas">
       <a href="#outreach" class="btn-primary" onclick="document.getElementById('outreach').scrollIntoView({behavior:'smooth'}); return false;">Get Screened</a>
