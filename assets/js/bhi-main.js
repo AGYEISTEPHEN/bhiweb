@@ -311,6 +311,7 @@ const BHI = {
           : `<img src="${img.url}" alt="${this.esc(img.alt_text || img.category_name)}" loading="lazy">`}
         <div class="gallery-overlay">
           <span>${this.esc(img.category_name)}</span>
+          ${img.program_title ? `<span class="gallery-program-tag">📍 ${this.esc(img.program_title)}</span>` : ''}
         </div>
       </div>
     `).join('');
@@ -402,7 +403,9 @@ const BHI = {
       imgEl.style.display = 'block';
       imgEl.src = img.url;
     }
-    box.querySelector('.bhi-lightbox-caption').textContent = img.caption || img.category_name || '';
+    const captionParts = [img.caption || img.category_name || ''].filter(Boolean);
+    if (img.program_title) captionParts.push(img.program_title);
+    box.querySelector('.bhi-lightbox-caption').textContent = captionParts.join(' · ');
   },
 
   navLightbox(dir) {

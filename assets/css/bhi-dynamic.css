@@ -128,11 +128,16 @@
 .gallery-item:hover img, .gallery-item:hover video { transform: scale(1.08); }
 .gallery-overlay {
   position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,29,71,.75), transparent 55%);
-  display: flex; align-items: flex-end; padding: .75rem; opacity: 0; transition: opacity .25s;
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end;
+  gap: .3rem; padding: .75rem; opacity: 0; transition: opacity .25s;
 }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 .gallery-overlay span {
   color: #fff; font-family: 'Montserrat', sans-serif; font-size: .72rem; font-weight: 700;
+}
+.gallery-program-tag {
+  color: var(--gold); font-size: .68rem !important; font-weight: 700;
+  background: rgba(0,0,0,.35); padding: .15rem .5rem; border-radius: 50px;
 }
 
 /* Play badge shown over video thumbnails */

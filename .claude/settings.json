@@ -46,7 +46,16 @@
       "Bash(curl -s -o /dev/null -w \"partnerships: %{http_code}\\\\n\" -b /tmp/bhi_cookies.txt \"http://localhost/bhiweb/admin/partnerships\")",
       "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e 'UPDATE admin_users SET password='\\\\''$2y$10$WgqYPVrLQhx3ntDDlwuG/eycyO6q8/mMHzl6eI7jj.C3AI8HVjTUG'\\\\'' WHERE id=1;')",
       "Bash(rm -f /tmp/bhi_cookies.txt /tmp/login_page.html /tmp/dashboard.html)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost/bhiweb/index.php\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost/bhiweb/index.php\")",
+      "Bash(curl -s \"http://localhost/bhiweb/api/gallery.php?action=list&category_id=0&per_page=12\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"DESCRIBE gallery_images;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"ALTER TABLE gallery_images ADD COLUMN media_type ENUM\\('image','video'\\) NOT NULL DEFAULT 'image' AFTER filename;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"UPDATE gallery_images SET media_type='video' WHERE filename LIKE '%.mp4';\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"SELECT id, category_id, program_id, filename, media_type, is_published FROM gallery_images;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"INSERT INTO gallery_images \\(category_id, program_id, filename, media_type, is_published\\) VALUES \\(1, 1, 'gal_test_temp.png', 'image', 1\\);\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"DELETE FROM gallery_images WHERE filename='gal_test_temp.png';\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"SELECT id,filename FROM gallery_images;\")"
     ]
   }
 }
