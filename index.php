@@ -36,11 +36,11 @@ $programTypeLabels = [
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bono Heart Initiative | Cardio-Metabolic-Renal Care — Bono Region Ghana</title>
+<title>Bono Heart Initiative | Cardio-Metabolic-Renal Care in the Bono Region, Ghana</title>
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/bhi-logo.png"/>
 <meta name="description" content="BHI brings free cardio-metabolic-renal screening, echocardiography, and specialist referral to underserved communities across the Bono Region. Get screened. Support the mission.">
-<meta property="og:title" content="Bono Heart Initiative — Cardio-Metabolic-Renal Care for All">
-<meta property="og:description" content="Heart care should not depend on where you live. BHI addresses the full cardio-metabolic-renal continuum — heart, diabetes, kidneys — across the Bono Region, Ghana.">
+<meta property="og:title" content="Bono Heart Initiative: Cardio-Metabolic-Renal Care for All">
+<meta property="og:description" content="Heart care should not depend on where you live. BHI addresses the full cardio-metabolic-renal continuum, from heart and kidney disease to diabetes, across the Bono Region, Ghana.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/bhi-index.css?v=<?= @filemtime(__DIR__ . '/assets/css/bhi-index.css') ?: BHI_VERSION ?>">
@@ -88,8 +88,8 @@ $programTypeLabels = [
     <div class="hero-badge">🩺 Bono Region, Ghana · Founded 2026</div>
     <h1>Heart Care Should Not Depend<br>on <em>Where You Live.</em></h1>
     <p class="hero-sub">
-      Bono Heart Initiative addresses the full Cardio-Metabolic-Renal continuum —
-      heart disease, diabetes, obesity, and kidney disease — bringing specialist
+      Bono Heart Initiative addresses the full Cardio-Metabolic-Renal continuum, from heart
+      disease, diabetes, and obesity to kidney disease, bringing specialist
       detection closer to every community across the Bono Region of Ghana.
     </p>
     <div class="hero-ctas">
@@ -119,7 +119,7 @@ $programTypeLabels = [
       <div class="section-divider"></div>
       <p class="section-sub">
         Hypertension. Diabetes. Obesity. Heart failure. Chronic kidney disease. These rarely show up
-        alone — most of the time they're stages of one continuum, and people don't find out they're
+        alone. Most of the time they're stages of one continuum, and people don't find out they're
         on it until it's too late.
       </p>
     </div>
@@ -135,14 +135,14 @@ $programTypeLabels = [
         <div class="stat-number">1 in 8</div>
         <div class="stat-label">
           <strong>Ghanaian adults live with diabetes</strong>
-          Uncontrolled blood sugar damages the heart, blood vessels, and kidneys simultaneously — accelerating the CMR cascade.
+          Uncontrolled blood sugar damages the heart, blood vessels, and kidneys simultaneously, accelerating the CMR cascade.
         </div>
       </div>
       <div class="stat-card">
         <div class="stat-number">#1</div>
         <div class="stat-label">
           <strong>Heart failure leads cardiac admissions</strong>
-          Presenting when structural damage is already irreversible — almost always the endpoint of years of unmanaged CMR disease.
+          Presenting when structural damage is already irreversible, almost always the endpoint of years of unmanaged CMR disease.
         </div>
       </div>
     </div>
@@ -153,7 +153,7 @@ $programTypeLabels = [
 <section class="why-bono" id="why-bono">
   <div class="container">
     <div class="section-tag">Why Bono Region</div>
-    <h2 class="section-title">The Bono Region carries a full CMR burden — with none of the infrastructure.</h2>
+    <h2 class="section-title">The Bono Region carries a full CMR burden, with none of the infrastructure.</h2>
     <div class="section-divider" style="background:rgba(255,255,255,0.3)"></div>
     <p class="section-sub">
       1.2 million people. 12 districts. No dedicated cardiovascular diagnostic centre.
@@ -166,19 +166,19 @@ $programTypeLabels = [
       </div>
       <div class="bono-fact">
         <div class="bono-fact-value">~35%</div>
-        <div class="bono-fact-label">Estimated hypertension prevalence — most undiagnosed, untreated, and progressing</div>
+        <div class="bono-fact-label">Estimated hypertension prevalence, most of it undiagnosed, untreated, and progressing</div>
       </div>
       <div class="bono-fact">
         <div class="bono-fact-value">Rising</div>
-        <div class="bono-fact-label">Diabetes and obesity burden — driven by dietary transition and sedentary urbanisation in district capitals</div>
+        <div class="bono-fact-label">Diabetes and obesity burden, driven by dietary change and sedentary urbanisation in district capitals</div>
       </div>
       <div class="bono-fact">
         <div class="bono-fact-value">2–3 hrs</div>
-        <div class="bono-fact-label">To the nearest specialist cardiac diagnostic centre — leaving most Bono Region residents without access to timely cardiovascular investigation.</div>
+        <div class="bono-fact-label">To the nearest specialist cardiac diagnostic centre, leaving most Bono Region residents without timely cardiovascular investigation.</div>
       </div>
       <div class="bono-fact">
         <div class="bono-fact-value">GHS 300</div>
-        <div class="bono-fact-label">Transport cost per referral — prohibitive for most farming and trading families</div>
+        <div class="bono-fact-label">Transport cost per referral, prohibitive for most farming and trading families</div>
       </div>
       <div class="bono-fact">
         <div class="bono-fact-value">Zero</div>
@@ -200,7 +200,7 @@ $programTypeLabels = [
           <div class="founder-photo-placeholder" style="border:none; background:none; padding:0;">
             <img
               src="assets/img/dr.png"
-              alt="Dr. Edward Bediako Mensah — Consulting Cardiologist, Founder of Bono Heart Initiative"
+              alt="Dr. Edward Bediako Mensah, Consulting Cardiologist and Founder of Bono Heart Initiative"
               style="width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:16px; display:block;"
             >
           </div>
@@ -219,25 +219,25 @@ $programTypeLabels = [
           Bono Heart Initiative grew out of one question that followed its founder across three countries and just as many health systems: why should the quality of your heart care depend on where you happen to live?
         </p>
         <p class="founder-body">
-          Its founder, Dr. Edward Bediako Mensah, began his medical training at the <strong>Latin American School of Medicine (ELAM) in Cuba</strong> — a globally recognised institution founded on the principles of equity, prevention, and service to underserved communities. At ELAM, physicians were taught to engage communities directly, identify disease early, and bring care closer to those who needed it most.
+          Its founder, Dr. Edward Bediako Mensah, began his medical training at the <strong>Latin American School of Medicine (ELAM) in Cuba</strong>, a globally recognised institution founded on the principles of equity, prevention, and service to underserved communities. At ELAM, physicians were taught to engage communities directly, identify disease early, and bring care closer to those who needed it most.
         </p>
         <p class="founder-body">
-          He then pursued specialist cardiology training at the <strong>Cardiocentro Ernesto Che Guevara in Santa Clara, Cuba</strong> — one of the country's leading cardiovascular centres — gaining advanced experience in echocardiography, heart failure, structural heart disease, and preventive cardiology. There, a pattern became clear: many patients presenting with advanced cardiovascular disease could have been identified far earlier if effective detection systems had existed closer to home.
+          He then pursued specialist cardiology training at the <strong>Cardiocentro Ernesto Che Guevara in Santa Clara, Cuba</strong>, one of the country's leading cardiovascular centres, gaining advanced experience in echocardiography, heart failure, structural heart disease, and preventive cardiology. There, a pattern became clear: many patients presenting with advanced cardiovascular disease could have been identified far earlier if effective detection systems had existed closer to home.
         </p>
         <blockquote class="founder-quote">
-          "Many of the patients presenting with advanced cardiovascular disease could have been identified much earlier — if effective systems for detection and follow-up had existed closer to where they lived."
+          "Many of the patients presenting with advanced cardiovascular disease could have been identified much earlier, if effective systems for detection and follow-up had existed closer to where they lived."
         </blockquote>
         <p class="founder-body">
-          His training is currently being further deepened through the <strong>Postgraduate Course in Heart Failure (PCHF) at University Hospital Zurich</strong> — with the Certificate of Advanced Studies (CAS) expected in 2027 — where he is learning how sustainable cardiovascular systems are built through registries, outcomes measurement, and implementation science.
+          His training is currently being further deepened through the <strong>Postgraduate Course in Heart Failure (PCHF) at University Hospital Zurich</strong>, with the Certificate of Advanced Studies (CAS) expected in 2027, where he is learning how sustainable cardiovascular systems are built through registries, outcomes measurement, and implementation science.
         </p>
         <p class="founder-body">
-          Bono Heart Initiative draws on all three of those experiences — ELAM's grounding in community medicine, the specialist training from Cardiocentro, and the systems-building lessons still coming out of Zurich.
+          Bono Heart Initiative draws on all three of those experiences: ELAM's grounding in community medicine, the specialist training from Cardiocentro, and the systems-building lessons still coming out of Zurich.
         </p>
         <p class="founder-body" style="font-weight:600; color:var(--navy);">
           BHI exists because specialist heart care should not be a privilege reserved for major cities. It should be accessible to every community.
         </p>
         <a href="#" onclick="switchPage('founder'); return false;" class="founder-link">
-          Meet Dr. Bediako Mensah — Full Story →
+          Meet Dr. Bediako Mensah: Full Story →
         </a>
       </div>
     </div>
@@ -249,11 +249,11 @@ $programTypeLabels = [
   <div class="container">
     <div class="text-center">
       <div class="section-tag">What Is CMR Disease?</div>
-      <h2 class="section-title">Cardio-Metabolic-Renal Disease:<br>the heart, metabolism, and kidneys — one system</h2>
+      <h2 class="section-title">Cardio-Metabolic-Renal Disease:<br>the heart, metabolism, and kidneys, one system</h2>
       <div class="section-divider" style="background:rgba(255,255,255,0.3); margin:1.25rem auto"></div>
       <p class="section-sub" style="color:rgba(255,255,255,0.78); margin:0 auto;">
         Cardio-Metabolic-Renal (CMR) disease isn't three separate problems that happen to occur
-        in the same patient. The heart, metabolism, and kidneys break down together — each one
+        in the same patient. The heart, metabolism, and kidneys break down together, each one
         making the others worse.
       </p>
     </div>
@@ -308,7 +308,7 @@ $programTypeLabels = [
     </div>
 
     <div class="cmr-tagline reveal">
-      BHI screens for the whole continuum — because treating the heart alone is not enough.
+      BHI screens for the whole continuum, because treating the heart alone is not enough.
       <span style="display:block; margin-top:0.75rem;">
         <a href="#" onclick="switchPage('education'); return false;" style="color:var(--gold); font-weight:700; text-decoration:underline;">Learn more about the CMR continuum →</a>
       </span>
@@ -335,7 +335,7 @@ $programTypeLabels = [
       </p>
       <p class="cmr-philosophy-body">
         Hypertension, diabetes, obesity, chronic kidney disease, heart failure, and stroke are
-        usually handled as unrelated conditions — different specialists, different clinics,
+        usually handled as unrelated conditions: different specialists, different clinics,
         different funding lines. In reality, they're stages of the same disease process, each one
         feeding the next.
       </p>
@@ -350,7 +350,7 @@ $programTypeLabels = [
       <div class="trust-card">
         <div class="trust-icon">👨‍⚕️</div>
         <h3>Cardiologist-Led</h3>
-        <p>Founded and led by Dr. Edward Bediako Mensah, MD — Consulting Cardiologist, Sunyani Teaching Hospital. Every clinical decision made at specialist level.</p>
+        <p>Founded and led by Dr. Edward Bediako Mensah, MD, Consulting Cardiologist at Sunyani Teaching Hospital. Every clinical decision made at specialist level.</p>
       </div>
       <div class="trust-card">
         <div class="trust-icon">📋</div>
@@ -360,22 +360,22 @@ $programTypeLabels = [
       <div class="trust-card">
         <div class="trust-icon">🏛️</div>
         <h3>Governance Structure Established</h3>
-        <p>BHI has defined its governance framework — with board-level oversight, clinical advisory input, and financial accountability structures in place from the outset.</p>
+        <p>BHI has defined its governance framework, with board-level oversight, clinical advisory input, and financial accountability structures in place from the outset.</p>
       </div>
       <div class="trust-card">
         <div class="trust-icon">🗂️</div>
         <h3>Registry Framework Developed</h3>
-        <p>A longitudinal CMR registry architecture is established before the first patient is screened — tracking every individual from first contact to final outcome across cardiac, metabolic, and renal parameters.</p>
+        <p>A longitudinal CMR registry architecture is established before the first patient is screened, tracking every individual from first contact to final outcome across cardiac, metabolic, and renal parameters.</p>
       </div>
       <div class="trust-card">
         <div class="trust-icon">🤝</div>
         <h3>Community-Focused Delivery</h3>
-        <p>BHI's clinical model is built around the community — not the clinic. Care comes to the patient. Screening happens in villages, markets, and schools, not waiting rooms.</p>
+        <p>BHI's clinical model is built around the community, not the clinic. Care comes to the patient. Screening happens in villages, markets, and schools, not waiting rooms.</p>
       </div>
       <div class="trust-card">
         <div class="trust-icon">🌱</div>
         <h3>Long-Term Sustainability Roadmap</h3>
-        <p>BHI is built to outlast its founders. Registry data feeds research, research attracts grants, and grants keep the programme running — with outcomes strong enough, over time, to shift policy.</p>
+        <p>BHI is built to outlast its founders. Registry data feeds research, research attracts grants, and grants keep the programme running, with outcomes strong enough, over time, to shift policy.</p>
       </div>
     </div>
   </div>
@@ -390,7 +390,7 @@ $programTypeLabels = [
       <div class="section-divider"></div>
       <p class="section-sub">
         BHI's clinical model was designed for one purpose: reaching the people who need
-        cardio-metabolic-renal care the most — in the communities where they live.
+        cardio-metabolic-renal care the most, in the communities where they live.
       </p>
     </div>
     <div class="two-tier reveal">
@@ -446,17 +446,17 @@ $programTypeLabels = [
       <div class="pillar">
         <div class="pillar-icon">🩺</div>
         <h3>CMR Community Screening</h3>
-        <p>Free cardio-metabolic-renal screening in villages, markets, and schools — heart, blood sugar, blood pressure, and kidney markers. No hospital visit required.</p>
+        <p>Free cardio-metabolic-renal screening in villages, markets, and schools: heart, blood sugar, blood pressure, and kidney markers. No hospital visit required.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">💙</div>
         <h3>Precision Diagnostics</h3>
-        <p>Echocardiography, ABPM, Holter monitoring, and metabolic panels at our Tier 2 hub — for every flagged patient across the CMR spectrum.</p>
+        <p>Echocardiography, ABPM, Holter monitoring, and metabolic panels at our Tier 2 hub, for every flagged patient across the CMR spectrum.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">🧪</div>
         <h3>Renal &amp; Metabolic Detection</h3>
-        <p>Identifying chronic kidney disease, insulin resistance, and metabolic syndrome early — before they progress to heart failure or stroke.</p>
+        <p>Identifying chronic kidney disease, insulin resistance, and metabolic syndrome early, before they progress to heart failure or stroke.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">🔄</div>
@@ -466,7 +466,7 @@ $programTypeLabels = [
       <div class="pillar">
         <div class="pillar-icon">📢</div>
         <h3>Advocacy &amp; Education</h3>
-        <p>Radio, schools, community campaigns — building CMR health literacy across the Bono Region so communities recognise the warning signs early.</p>
+        <p>Radio, schools, community campaigns: building CMR health literacy across the Bono Region so communities recognise the warning signs early.</p>
       </div>
     </div>
   </div>
@@ -480,7 +480,7 @@ $programTypeLabels = [
       <h2 class="section-title">Understanding CMR Disease.</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
-        Science that speaks to everyone — in a language that makes sense in every community.
+        Science that speaks to everyone, in a language that makes sense in every community.
       </p>
     </div>
     <div class="ac-card reveal">
@@ -490,12 +490,12 @@ $programTypeLabels = [
         An AC unit works hardest when the rooms are too full, the filters are blocked, and the power supply is unstable.
         Your heart, metabolism, and kidneys work exactly the same way.
         <br><br>
-        When you carry excess weight, your heart pumps harder — like an AC cooling a room that is too large.
-        When your blood sugar is uncontrolled, your blood vessels thicken — like a clogged filter.
-        When your kidneys are stressed, they can no longer remove waste efficiently — and the pressure backs up through the whole system.
+        When you carry excess weight, your heart pumps harder, like an AC cooling a room that is too large.
+        When your blood sugar is uncontrolled, your blood vessels thicken, like a clogged filter.
+        When your kidneys are stressed, they can no longer remove waste efficiently, and the pressure backs up through the whole system.
         Eventually, the unit overheats. That is heart failure. That is stroke. That is end-stage kidney disease.
         <br><br>
-        <strong>The good news:</strong> you can service the system before it breaks — that's exactly what BHI does.
+        <strong>The good news:</strong> you can service the system before it breaks. That's exactly what BHI does.
       </p>
       <div class="ac-stages">
         <div class="ac-stage">
@@ -506,7 +506,7 @@ $programTypeLabels = [
         <div class="ac-stage">
           <div class="ac-stage-num">Stage 2</div>
           <div class="ac-stage-title">Rising Pressure</div>
-          <div class="ac-stage-desc">Blood pressure climbs. Blood sugar rises. The system is straining — but still silent.</div>
+          <div class="ac-stage-desc">Blood pressure climbs. Blood sugar rises. The system is straining, but still silent.</div>
         </div>
         <div class="ac-stage">
           <div class="ac-stage-num">Stage 3</div>
@@ -520,7 +520,7 @@ $programTypeLabels = [
         </div>
       </div>
       <div class="ac-cta-line">
-        BHI catches you at Stage 1 and Stage 2 — before the breakdown.
+        BHI catches you at Stage 1 and Stage 2, before the breakdown.
         <a href="#" onclick="switchPage('education'); return false;">Read the full CMR education resource →</a>
       </div>
     </div>
@@ -536,7 +536,7 @@ $programTypeLabels = [
       <div class="section-divider" style="background:rgba(255,255,255,0.3); margin:1.25rem auto"></div>
       <p class="section-sub">
         Most outreach programmes screen on the day and disappear. BHI maintains a
-        longitudinal CMR registry — tracking every patient from first contact to final outcome
+        longitudinal CMR registry, tracking every patient from first contact to final outcome
         across the full cardio-metabolic-renal continuum.
       </p>
     </div>
@@ -544,27 +544,27 @@ $programTypeLabels = [
       <div class="registry-card">
         <div class="registry-card-icon">🫀</div>
         <h3>Echo Registry</h3>
-        <p>All echo studies — findings, impression, referral outcome, follow-up. BHI's primary cardiac research platform.</p>
+        <p>All echo studies: findings, impression, referral outcome, follow-up. BHI's primary cardiac research platform.</p>
       </div>
       <div class="registry-card">
         <div class="registry-card-icon">📈</div>
         <h3>ABPM Registry</h3>
-        <p>24-hr BP profiles, circadian phenotype, dipping pattern — connecting hypertension to its cardiac and renal consequences.</p>
+        <p>24-hr BP profiles, circadian phenotype, dipping pattern: connecting hypertension to its cardiac and renal consequences.</p>
       </div>
       <div class="registry-card">
         <div class="registry-card-icon">🧪</div>
         <h3>Metabolic Registry</h3>
-        <p>HbA1c, fasting glucose, BMI, waist circumference — a longitudinal metabolic burden map of the Bono Region.</p>
+        <p>HbA1c, fasting glucose, BMI, waist circumference: a longitudinal metabolic burden map of the Bono Region.</p>
       </div>
       <div class="registry-card">
         <div class="registry-card-icon">🫘</div>
         <h3>Renal Registry</h3>
-        <p>Urine protein, eGFR trends, CKD staging — linking metabolic and cardiac risk to kidney outcomes. First of its kind in the region.</p>
+        <p>Urine protein, eGFR trends, CKD staging: linking metabolic and cardiac risk to kidney outcomes. First of its kind in the region.</p>
       </div>
       <div class="registry-card">
         <div class="registry-card-icon">🔄</div>
         <h3>Referral Tracking</h3>
-        <p>Every referral — initiated, completed, outcome recorded. Accountability data for donors and the Ghana Health Service.</p>
+        <p>Every referral, initiated, completed, outcome recorded. Accountability data for donors and the Ghana Health Service.</p>
       </div>
     </div>
     <div class="registry-chain reveal">
@@ -594,7 +594,7 @@ $programTypeLabels = [
       <h2 class="section-title">Building a cardiovascular system<br>for the Bono Region.</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
-        BHI works district by district, one registry entry and one referral at a time — this isn't
+        BHI works district by district, one registry entry and one referral at a time. This isn't
         a one-off outreach programme, it's a regional health system taking permanent shape.
       </p>
     </div>
@@ -624,7 +624,7 @@ $programTypeLabels = [
         <div class="roadmap-year">2030</div>
         <div class="roadmap-content">
           <h3>Sustain</h3>
-          <p>Establish a self-sustaining regional CMR network — supporting early detection, referral coordination, outcomes tracking, and evidence-based policy development across the Bono Region.</p>
+          <p>Establish a self-sustaining regional CMR network, supporting early detection, referral coordination, outcomes tracking, and evidence-based policy development across the Bono Region.</p>
         </div>
       </div>
     </div>
@@ -636,7 +636,7 @@ $programTypeLabels = [
   <div class="container">
     <div class="text-center">
       <div class="section-tag navy">Our Impact</div>
-      <h2 class="section-title">Year 1 Targets — 2026</h2>
+      <h2 class="section-title">Year 1 Targets (2026)</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
         Behind every number is a person reached, a diagnosis made, or a referral followed through.
@@ -671,7 +671,7 @@ $programTypeLabels = [
     </p>
 
     <div style="margin-top:3rem;padding-top:3rem;border-top:1px solid rgba(27,47,110,.1)">
-      <p style="text-align:center;font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--red);margin-bottom:1.5rem">📊 Live Progress — Updated in Real Time</p>
+      <p style="text-align:center;font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--red);margin-bottom:1.5rem">📊 Live Progress, Updated in Real Time</p>
       <div id="impact-stats-grid">
         <div class="bhi-loading">Loading live statistics…</div>
       </div>
@@ -738,7 +738,7 @@ $programTypeLabels = [
       <div class="section-divider"></div>
       <p class="section-sub">
         This is an investment in the cardio-metabolic-renal health of 1.2 million people, not a
-        charity donation — you get full reporting, named impact, and a quarterly account of
+        charity donation. You get full reporting, named impact, and a quarterly account of
         exactly what your money did.
       </p>
     </div>
@@ -835,7 +835,7 @@ $programTypeLabels = [
       </div>
     </div>
     <div class="partner-cta-block reveal">
-      <p>All partner contributions are acknowledged in writing. BHI commits to annual impact reporting — showing exactly what your investment achieved.</p>
+      <p>All partner contributions are acknowledged in writing. BHI commits to annual impact reporting that shows exactly what your investment achieved.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
         <a href="#partner-form" class="btn-primary" onclick="document.getElementById('partner-form').scrollIntoView({behavior:'smooth'})">Partner With BHI</a>
         <a href="#" onclick="switchPage('strategic-plan'); return false;" class="btn-secondary" style="color:var(--navy); border-color:var(--navy);">View Strategic Plan 2026–2028</a>
@@ -872,11 +872,11 @@ $programTypeLabels = [
           <div style="margin-bottom:1rem">
             <label style="display:block;font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;color:#475569;margin-bottom:.4rem">Partnership Tier</label>
             <select name="tier" style="width:100%;padding:.7rem .9rem;border:1.5px solid #e2e8f0;border-radius:7px;font-size:.9rem">
-              <option value="bronze">Bronze — GHS 5,000</option>
-              <option value="silver">Silver — GHS 10,000</option>
-              <option value="gold">Gold — GHS 25,000</option>
-              <option value="platinum">Platinum — GHS 50,000</option>
-              <option value="corporate">Corporate Strategic — GHS 100,000+</option>
+              <option value="bronze">Bronze: GHS 5,000</option>
+              <option value="silver">Silver: GHS 10,000</option>
+              <option value="gold">Gold: GHS 25,000</option>
+              <option value="platinum">Platinum: GHS 50,000</option>
+              <option value="corporate">Corporate Strategic: GHS 100,000+</option>
               <option value="individual">Individual Donor</option>
               <option value="in_kind">In-Kind Support</option>
               <option value="other">Other / Not Sure Yet</option>
@@ -911,23 +911,23 @@ $programTypeLabels = [
     <div class="support-grid reveal">
       <div class="support-card">
         <div class="support-amount">GHS 500</div>
-        <div class="support-desc">Supports the screening supplies for a full community outreach day — blood pressure cuffs, glucose strips, ECG electrodes, and consumables.</div>
+        <div class="support-desc">Supports the screening supplies for a full community outreach day: blood pressure cuffs, glucose strips, ECG electrodes, and consumables.</div>
       </div>
       <div class="support-card">
         <div class="support-amount">GHS 2,000</div>
-        <div class="support-desc">Supports community mobilisation — logistics, transport, and communications to bring a screening session to a remote village or market.</div>
+        <div class="support-desc">Supports community mobilisation: logistics, transport, and communications to bring a screening session to a remote village or market.</div>
       </div>
       <div class="support-card support-card--highlight">
         <div class="support-amount">GHS 5,000</div>
-        <div class="support-desc">Supports a complete community outreach session — from arrival in the village to final triage, education, and referral for every flagged patient.</div>
+        <div class="support-desc">Supports a complete community outreach session, from arrival in the village to final triage, education, and referral for every flagged patient.</div>
       </div>
       <div class="support-card">
         <div class="support-amount">GHS 25,000</div>
-        <div class="support-desc">Supports a district-scale screening programme — reaching multiple communities across one district with full CMR screening and diagnostic follow-up.</div>
+        <div class="support-desc">Supports a district-scale screening programme, reaching multiple communities across one district with full CMR screening and diagnostic follow-up.</div>
       </div>
       <div class="support-card">
         <div class="support-amount">GHS 100,000+</div>
-        <div class="support-desc">Supports strategic regional expansion — enabling BHI to establish a permanent presence, trained staff, and structured outreach cycles across multiple districts.</div>
+        <div class="support-desc">Supports strategic regional expansion, enabling BHI to establish a permanent presence, trained staff, and structured outreach cycles across multiple districts.</div>
       </div>
     </div>
     <div class="support-cta reveal">
@@ -942,7 +942,7 @@ $programTypeLabels = [
     <h2>Every heartbeat matters.<br><em>Every community deserves a fighting chance.</em></h2>
     <p>
       A farmer in Dormaa. A teacher in Berekum. A child growing up in Jaman North.
-      Their hearts deserve the same care as anyone in Accra or Kumasi — which means the doctor
+      Their hearts deserve the same care as anyone in Accra or Kumasi, which means the doctor
       comes to them, and problems get caught while they're still fixable, not after.
     </p>
     <div class="closing-ctas">
@@ -961,8 +961,8 @@ $programTypeLabels = [
       <h2 class="section-title">Send Us a Message</h2>
       <div class="section-divider"></div>
       <p class="section-sub">
-        Questions about screening, partnerships, volunteering, or media enquiries —
-        we typically respond within 2 business days.
+        Questions about screening, partnerships, volunteering, or media enquiries?
+        We typically respond within 2 business days.
       </p>
     </div>
     <div style="background:#fff;border-radius:16px;padding:2.5rem;box-shadow:0 8px 32px rgba(27,47,110,.08)">
@@ -1092,7 +1092,7 @@ $programTypeLabels = [
     <h1>One Body.<br><em>One Disease Continuum.</em></h1>
     <p>
       Obesity, diabetes, high blood pressure, kidney disease, heart failure, and stroke
-      are not separate conditions. They are one story — and BHI is here to help you
+      are not separate conditions. They are one story, and BHI is here to help you
       understand it before it reaches the final chapter.
     </p>
   </div>
@@ -1107,7 +1107,7 @@ $programTypeLabels = [
       <div class="section-divider" style="background:rgba(255,255,255,0.3); margin:1.25rem auto;"></div>
       <p class="section-sub" style="color:rgba(255,255,255,0.78); margin:0 auto;">
         Cardio-Metabolic-Renal (CMR) disease describes the way the heart, metabolism,
-        and kidneys damage each other in a vicious cycle — each organ's failure accelerating
+        and kidneys damage each other in a vicious cycle, each organ's failure accelerating
         the collapse of the others.
       </p>
     </div>
@@ -1130,7 +1130,7 @@ $programTypeLabels = [
     </div>
     <div class="cmr-link-statement reveal">
       "You cannot treat the heart and ignore the kidneys. You cannot treat the kidneys and ignore the blood sugar.
-      CMR disease demands one integrated approach — and that is exactly what BHI delivers."
+      CMR disease demands one integrated approach, and that is exactly what BHI delivers."
     </div>
   </div>
 </section>
@@ -1142,7 +1142,7 @@ $programTypeLabels = [
     <h2 class="section-title">How it starts. How it progresses. Where BHI intervenes.</h2>
     <div class="section-divider"></div>
     <p class="section-sub">
-      Most people reach hospital at Stage 6 or 7. BHI is designed to find you at Stage 1 or 2 —
+      Most people reach hospital at Stage 6 or 7. BHI is designed to find you at Stage 1 or 2,
       when the damage is still reversible and the cost of intervention is low.
     </p>
 
@@ -1155,14 +1155,14 @@ $programTypeLabels = [
         </div>
         <div class="step-content">
           <h3>Obesity &amp; Excess Weight</h3>
-          <p>When the body carries more fat than it can manage — especially around the abdomen — it begins to produce inflammatory signals that affect every organ. The heart works harder to pump blood through a larger body. Fat tissue becomes metabolically active in damaging ways.</p>
+          <p>When the body carries more fat than it can manage, especially around the abdomen, it begins to produce inflammatory signals that affect every organ. The heart works harder to pump blood through a larger body. Fat tissue becomes metabolically active in damaging ways.</p>
           <p>At this stage there are usually <strong>no symptoms</strong>. Most people feel well. The disease is silent.</p>
           <div class="step-tags">
             <span class="step-tag safe">Fully reversible at this stage</span>
             <span class="step-tag">Lifestyle + diet</span>
             <span class="step-tag warning">Often missed</span>
           </div>
-          <div class="step-bhi-note">BHI screens: BMI, waist circumference, weight-height ratio — at every community outreach.</div>
+          <div class="step-bhi-note">BHI screens: BMI, waist circumference, weight-height ratio, at every community outreach.</div>
         </div>
       </div>
 
@@ -1173,8 +1173,8 @@ $programTypeLabels = [
         </div>
         <div class="step-content">
           <h3>Insulin Resistance &amp; Metabolic Syndrome</h3>
-          <p>The body's cells stop responding to insulin properly. The pancreas compensates by producing more — but eventually it cannot keep up. Blood sugar begins to rise. Blood pressure creeps upward. Cholesterol patterns become dangerous.</p>
-          <p>Metabolic syndrome — the cluster of high blood sugar, high blood pressure, abnormal lipids, and abdominal obesity — multiplies the risk of heart disease and kidney damage five-fold.</p>
+          <p>The body's cells stop responding to insulin properly. The pancreas compensates by producing more, but eventually it cannot keep up. Blood sugar begins to rise. Blood pressure creeps upward. Cholesterol patterns become dangerous.</p>
+          <p>Metabolic syndrome, the cluster of high blood sugar, high blood pressure, abnormal lipids, and abdominal obesity, multiplies the risk of heart disease and kidney damage five-fold.</p>
           <div class="step-tags">
             <span class="step-tag safe">Reversible with structured intervention</span>
             <span class="step-tag warning">Blood sugar rising</span>
@@ -1191,8 +1191,8 @@ $programTypeLabels = [
         </div>
         <div class="step-content">
           <h3>Type 2 Diabetes</h3>
-          <p>Blood sugar is persistently elevated. Glucose damages blood vessel walls throughout the body — in the eyes, the nerves, the kidneys, and the heart. The kidneys begin to leak protein (a sign of damage). The heart muscle itself becomes stiffer and less efficient.</p>
-          <p>In Ghana, most people with diabetes are diagnosed at this stage — or later. In the Bono Region, most are never diagnosed at all.</p>
+          <p>Blood sugar is persistently elevated. Glucose damages blood vessel walls throughout the body, in the eyes, the nerves, the kidneys, and the heart. The kidneys begin to leak protein (a sign of damage). The heart muscle itself becomes stiffer and less efficient.</p>
+          <p>In Ghana, most people with diabetes are diagnosed at this stage or later. In the Bono Region, most are never diagnosed at all.</p>
           <div class="step-tags">
             <span class="step-tag warning">Manageable but not curable</span>
             <span class="step-tag danger">Organ damage begins</span>
@@ -1209,7 +1209,7 @@ $programTypeLabels = [
         </div>
         <div class="step-content">
           <h3>Hypertension &amp; Vascular Damage</h3>
-          <p>Elevated blood pressure over years thickens and stiffens artery walls. The heart must pump against greater resistance, and enlarges as a result. Blood vessels supplying the kidneys narrow, reducing blood flow and triggering the kidneys to raise blood pressure further — a damaging feedback loop.</p>
+          <p>Elevated blood pressure over years thickens and stiffens artery walls. The heart must pump against greater resistance, and enlarges as a result. Blood vessels supplying the kidneys narrow, reducing blood flow and triggering the kidneys to raise blood pressure further, a damaging feedback loop.</p>
           <p>Uncontrolled hypertension is the single most common cause of stroke, heart failure, and kidney failure in Ghana.</p>
           <div class="step-tags">
             <span class="step-tag danger">High stroke risk</span>
@@ -1227,8 +1227,8 @@ $programTypeLabels = [
         </div>
         <div class="step-content">
           <h3>Chronic Kidney Disease (CKD)</h3>
-          <p>Years of high blood pressure and high blood sugar scar the kidney filters permanently. The kidneys lose their ability to remove waste products and regulate fluid. Toxins accumulate. Fluid builds up in the lungs and legs — placing enormous strain on the heart.</p>
-          <p>CKD and heart failure accelerate each other. This is called <strong>cardiorenal syndrome</strong> — and it is far more common in the Bono Region than anyone currently knows, because it has never been screened for.</p>
+          <p>Years of high blood pressure and high blood sugar scar the kidney filters permanently. The kidneys lose their ability to remove waste products and regulate fluid. Toxins accumulate. Fluid builds up in the lungs and legs, placing enormous strain on the heart.</p>
+          <p>CKD and heart failure accelerate each other. This is called <strong>cardiorenal syndrome</strong>, and it is far more common in the Bono Region than anyone currently knows, because it has never been screened for.</p>
           <div class="step-tags">
             <span class="step-tag danger">Irreversible scarring</span>
             <span class="step-tag danger">Cardiorenal syndrome risk</span>
@@ -1246,13 +1246,13 @@ $programTypeLabels = [
         <div class="step-content">
           <h3>Heart Failure</h3>
           <p>The heart can no longer pump enough blood to meet the body's needs. Fluid collects in the lungs (causing breathlessness) and the legs (causing swelling). Energy levels collapse. The kidneys fail further, creating a downward spiral between heart and kidney.</p>
-          <p>Heart failure is Ghana's number one cause of cardiac hospital admission. In the Bono Region, most patients arrive in crisis — because no earlier intervention ever occurred.</p>
+          <p>Heart failure is Ghana's number one cause of cardiac hospital admission. In the Bono Region, most patients arrive in crisis, because no earlier intervention ever occurred.</p>
           <div class="step-tags">
             <span class="step-tag danger">Life-threatening</span>
             <span class="step-tag danger">Hospital admission required</span>
             <span class="step-tag">Expensive to manage</span>
           </div>
-          <div class="step-bhi-note">BHI's echocardiography detects heart enlargement and dysfunction before heart failure develops — at Tier 2 hub.</div>
+          <div class="step-bhi-note">BHI's echocardiography detects heart enlargement and dysfunction before heart failure develops, at Tier 2 hub.</div>
         </div>
       </div>
 
@@ -1264,13 +1264,13 @@ $programTypeLabels = [
         <div class="step-content">
           <h3>Stroke</h3>
           <p>Years of hypertension, diabetes, and inflammation weaken blood vessels in the brain. When one bursts or becomes blocked, a stroke occurs within minutes. The damage can be permanent: paralysis, speech loss, cognitive impairment, or death.</p>
-          <p>In Ghana, stroke kills or disables in its prime. Most victims had elevated blood pressure for years before the event — and had never been told.</p>
+          <p>In Ghana, stroke kills or disables in its prime. Most victims had elevated blood pressure for years before the event, and had never been told.</p>
           <div class="step-tags">
             <span class="step-tag danger">Emergency. Often fatal.</span>
             <span class="step-tag danger">Permanent disability risk</span>
             <span class="step-tag">Entirely preventable at Stage 1–4</span>
           </div>
-          <div class="step-bhi-note">Every BHI community screening is stroke prevention. Catch the blood pressure before the stroke — not after.</div>
+          <div class="step-bhi-note">Every BHI community screening is stroke prevention. Catch the blood pressure before the stroke, not after.</div>
         </div>
       </div>
 
@@ -1286,25 +1286,25 @@ $programTypeLabels = [
     <div class="section-divider"></div>
     <p class="section-sub">
       Medical language should never be a barrier to understanding your own health.
-      Here is the CMR disease story — told in a way that works everywhere.
+      Here is the CMR disease story, told in a way that works everywhere.
     </p>
 
     <div class="ac-hero-card reveal">
       <h3>Your body is like an air conditioner.<br><em>Overwork it long enough, and it will break down.</em></h3>
       <p>
         Think of your heart as an air-conditioning unit. It runs day and night to keep everything cool and comfortable.
-        When the system is healthy — the filters are clean, the power supply is stable, the rooms are not too big — the AC runs easily.
+        When the system is healthy (the filters are clean, the power supply is stable, the rooms are not too big), the AC runs easily.
         <br><br>
         But when you carry excess weight, your heart must cool a bigger space. It works harder just to keep up.
-        When your blood sugar is uncontrolled, the internal filters (your kidneys) become clogged — blocked with sugar deposits that damage the fine mesh that cleans your blood.
+        When your blood sugar is uncontrolled, the internal filters (your kidneys) become clogged, blocked with sugar deposits that damage the fine mesh that cleans your blood.
         When your blood pressure is high, it is like running the AC at maximum power, constantly, with no rest.
         <br><br>
         What happens to an AC that runs too hard, with dirty filters, on an unstable power supply?
         <br><br>
-        <strong>It overheats. It breaks down. And by the time the failure is obvious — the damage is already done.</strong>
+        <strong>It overheats. It breaks down. And by the time the failure is obvious, the damage is already done.</strong>
         <br><br>
         Heart failure. Kidney failure. Stroke. These are not sudden events. They are the predictable end of a long overload.
-        And the extraordinary truth is: <strong>every stage before breakdown is detectable, manageable, and often reversible</strong> — if you catch it in time.
+        And the extraordinary truth is: <strong>every stage before breakdown is detectable, manageable, and often reversible</strong>, if you catch it in time.
       </p>
     </div>
 
@@ -1312,22 +1312,22 @@ $programTypeLabels = [
       <div class="ac-card">
         <div class="ac-card-stage">The Overload</div>
         <h4>Too much weight, too little movement</h4>
-        <p>The AC is cooling a space that is too large. It can manage — but it is running harder than it should be every single day.</p>
+        <p>The AC is cooling a space that is too large. It can manage, but it is running harder than it should be every single day.</p>
       </div>
       <div class="ac-card">
         <div class="ac-card-stage">The Blocked Filter</div>
         <h4>Insulin resistance &amp; rising blood sugar</h4>
-        <p>The internal filters are getting clogged. Airflow is reduced. The system compensates — but efficiency is dropping.</p>
+        <p>The internal filters are getting clogged. Airflow is reduced. The system compensates, but efficiency is dropping.</p>
       </div>
       <div class="ac-card">
         <div class="ac-card-stage">The Unstable Power</div>
-        <h4>High blood pressure — persistent, relentless</h4>
+        <h4>High blood pressure: persistent, relentless</h4>
         <p>Voltage surges and drops all day. The compressor strains. Components begin to degrade from the inside.</p>
       </div>
       <div class="ac-card">
         <div class="ac-card-stage">The Pipe Damage</div>
         <h4>Kidneys scarring, vessels thickening</h4>
-        <p>The coolant pipes are corroded. Fluid backs up. The whole system is under pressure — and leaking.</p>
+        <p>The coolant pipes are corroded. Fluid backs up. The whole system is under pressure, and leaking.</p>
       </div>
       <div class="ac-card">
         <div class="ac-card-stage">The Breakdown</div>
@@ -1337,7 +1337,7 @@ $programTypeLabels = [
       <div class="ac-card" style="border-left-color: var(--success); background: rgba(46,139,87,0.05);">
         <div class="ac-card-stage" style="color: var(--success);">BHI's Role</div>
         <h4 style="color: var(--success);">Service it before it breaks.</h4>
-        <p>BHI comes to your community and checks the system — blood pressure, blood sugar, heart, kidneys — before a breakdown becomes inevitable.</p>
+        <p>BHI comes to your community and checks the system (blood pressure, blood sugar, heart, kidneys) before a breakdown becomes inevitable.</p>
       </div>
     </div>
 
@@ -1358,23 +1358,23 @@ $programTypeLabels = [
     <div class="faq-list reveal">
       <div class="faq-item">
         <div class="faq-q">I feel fine. Do I still need to be screened?</div>
-        <div class="faq-a">Yes — and this is the most important message BHI carries. CMR disease is silent for years. High blood pressure has no symptoms until a stroke occurs. Diabetes damages kidneys for a decade before pain begins. Heart failure announces itself only when the heart has already failed. Feeling fine means you are in the stage where intervention works best.</div>
+        <div class="faq-a">Yes, and this is the most important message BHI carries. CMR disease is silent for years. High blood pressure has no symptoms until a stroke occurs. Diabetes damages kidneys for a decade before pain begins. Heart failure announces itself only when the heart has already failed. Feeling fine means you are in the stage where intervention works best.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Is this only for older people?</div>
-        <div class="faq-a">No. Hypertension is increasingly common in Ghanaians in their 30s. Obesity and insulin resistance are rising in young adults. BHI screens from age 18 upward — and conducts congenital heart disease screening in children. CMR disease does not wait for age.</div>
+        <div class="faq-a">No. Hypertension is increasingly common in Ghanaians in their 30s. Obesity and insulin resistance are rising in young adults. BHI screens from age 18 upward, and conducts congenital heart disease screening in children. CMR disease does not wait for age.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">My mother has diabetes. Does that mean I will get it too?</div>
-        <div class="faq-a">Family history increases your risk — but it does not determine your outcome. Lifestyle, diet, activity, and early screening can dramatically reduce the probability of developing diabetes even with a strong family history. BHI's screening gives you the information to act before the condition develops.</div>
+        <div class="faq-a">Family history increases your risk, but it does not determine your outcome. Lifestyle, diet, activity, and early screening can dramatically reduce the probability of developing diabetes even with a strong family history. BHI's screening gives you the information to act before the condition develops.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">What does BHI actually do when you come to screen me?</div>
-        <div class="faq-a">At Tier 1 (community screening), BHI measures your blood pressure, blood glucose, BMI, and performs an ECG. If anything is flagged, you are invited to a Tier 2 session at our hub — where echocardiography, 24-hour BP monitoring, metabolic blood tests, and kidney function tests are performed. Everything is explained to you clearly. Nothing costs you anything.</div>
+        <div class="faq-a">At Tier 1 (community screening), BHI measures your blood pressure, blood glucose, BMI, and performs an ECG. If anything is flagged, you are invited to a Tier 2 session at our hub, where echocardiography, 24-hour BP monitoring, metabolic blood tests, and kidney function tests are performed. Everything is explained to you clearly. Nothing costs you anything.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Can CMR disease be treated or reversed?</div>
-        <div class="faq-a">At early stages — absolutely. Obesity and insulin resistance can be reversed with lifestyle intervention. Blood pressure can be normalised with medication and lifestyle changes. Early kidney damage can be slowed or halted. The key is catching the disease in Stage 1, 2, or 3 — not Stage 6 or 7. That is the entire rationale for BHI's existence.</div>
+        <div class="faq-a">At early stages, absolutely. Obesity and insulin resistance can be reversed with lifestyle intervention. Blood pressure can be normalised with medication and lifestyle changes. Early kidney damage can be slowed or halted. The key is catching the disease in Stage 1, 2, or 3, not Stage 6 or 7. That is the entire rationale for BHI's existence.</div>
       </div>
     </div>
   </div>
@@ -1386,7 +1386,7 @@ $programTypeLabels = [
     <h2>Now you know the story.<br><em>Let BHI check your system.</em></h2>
     <p>
       Free. No hospital visit required. We come to you. One screening could change the
-      direction of your health — and protect everyone who depends on you.
+      direction of your health, and protect everyone who depends on you.
     </p>
     <div class="cta-btns">
       <a href="#outreach" onclick="switchPage('home'); setTimeout(()=>document.getElementById('outreach').scrollIntoView({behavior:'smooth'}), 150); return false;" class="btn-primary">🩺 Get Screened</a>
@@ -1432,7 +1432,7 @@ $programTypeLabels = [
         <div class="profile-photo" style="border:none; background:none;">
           <img
             src="assets/img/dr.png"
-            alt="Dr. Edward Bediako Mensah — Consulting Cardiologist and Founder of the Bono Heart Initiative"
+            alt="Dr. Edward Bediako Mensah, Consulting Cardiologist and Founder of the Bono Heart Initiative"
             class="profile-portrait"
           >
         </div>
@@ -1455,48 +1455,48 @@ $programTypeLabels = [
         <div class="section-divider"></div>
 
         <p class="story-body">
-          Bono Heart Initiative was born from a journey that crossed communities, countries, and healthcare systems — but always returned to one central question: why should access to specialist care depend on geography?
+          Bono Heart Initiative was born from a journey that crossed communities, countries, and healthcare systems, but always returned to one central question: why should access to specialist care depend on geography?
         </p>
 
-        <h3 class="story-h3">ELAM Cuba — Where It Began</h3>
+        <h3 class="story-h3">ELAM Cuba: Where It Began</h3>
         <p class="story-body">
-          Dr. Bediako Mensah began his medical training at the <strong>Latin American School of Medicine (ELAM) in Cuba</strong> — a globally recognised institution founded on the principles of equity, prevention, and service to underserved communities.
+          Dr. Bediako Mensah began his medical training at the <strong>Latin American School of Medicine (ELAM) in Cuba</strong>, a globally recognised institution founded on the principles of equity, prevention, and service to underserved communities.
         </p>
         <p class="story-body">
-          At ELAM, healthcare was not viewed as something confined to hospitals. Physicians were taught to engage communities directly, identify disease early, and bring care closer to those who needed it most. This philosophy profoundly shaped his understanding of medicine — and never left him.
+          At ELAM, healthcare was not viewed as something confined to hospitals. Physicians were taught to engage communities directly, identify disease early, and bring care closer to those who needed it most. This philosophy profoundly shaped his understanding of medicine, and never left him.
         </p>
 
         <p class="story-body story-body--personal">
-          But this commitment to equity was not shaped by training alone. Growing up in Ghana, Dr. Bediako Mensah experienced first-hand the realities faced by people in underserved communities — the distances travelled to reach care, the costs that made specialist appointments impossible, the diagnoses that came too late because no system had ever reached the patient first. ELAM did not create this conviction. It gave it a framework, a language, and a path forward.
+          But this commitment to equity was not shaped by training alone. Growing up in Ghana, Dr. Bediako Mensah experienced first-hand the realities faced by people in underserved communities: the distances travelled to reach care, the costs that made specialist appointments impossible, the diagnoses that came too late because no system had ever reached the patient first. ELAM did not create this conviction. It gave it a framework, a language, and a path forward.
         </p>
 
-        <h3 class="story-h3">Cardiocentro Ernesto Che Guevara — Specialist Training</h3>
+        <h3 class="story-h3">Cardiocentro Ernesto Che Guevara: Specialist Training</h3>
         <p class="story-body">
-          Following medical school, he pursued specialist cardiology training at the <strong>Cardiocentro Ernesto Che Guevara in Santa Clara, Cuba</strong> — one of the country's leading cardiovascular centres. There he gained advanced experience in cardiovascular diagnostics, heart failure management, structural heart disease, echocardiography, preventive cardiology, and the complexities of specialist cardiac care.
+          Following medical school, he pursued specialist cardiology training at the <strong>Cardiocentro Ernesto Che Guevara in Santa Clara, Cuba</strong>, one of the country's leading cardiovascular centres. There he gained advanced experience in cardiovascular diagnostics, heart failure management, structural heart disease, echocardiography, preventive cardiology, and the complexities of specialist cardiac care.
         </p>
 
         <blockquote class="story-quote">
-          "Many of the patients presenting with advanced cardiovascular disease could have been identified much earlier — if effective systems for detection and follow-up had existed closer to where they lived."
+          "Many of the patients presenting with advanced cardiovascular disease could have been identified much earlier, if effective systems for detection and follow-up had existed closer to where they lived."
         </blockquote>
 
         <p class="story-body">
-          That experience revealed an important reality: the clinical problems were rarely the result of poor medicine. They were the result of late presentation — driven by distance, cost, and the absence of structured detection systems in communities.
+          That experience revealed an important reality: the clinical problems were rarely the result of poor medicine. They were the result of late presentation, driven by distance, cost, and the absence of structured detection systems in communities.
         </p>
 
-        <h3 class="story-h3">Returning to Ghana — The Observation That Could Not Be Ignored</h3>
+        <h3 class="story-h3">Returning to Ghana: The Observation That Could Not Be Ignored</h3>
         <p class="story-body">
-          Returning to Ghana and working within the Bono Region reinforced this observation. Patients frequently travelled long distances for specialist evaluation — often presenting late, after years of undetected hypertension, diabetes, heart failure, congenital heart disease, or kidney disease. The need was clear. The system to address it did not yet exist.
+          Returning to Ghana and working within the Bono Region reinforced this observation. Patients frequently travelled long distances for specialist evaluation, often presenting late, after years of undetected hypertension, diabetes, heart failure, congenital heart disease, or kidney disease. The need was clear. The system to address it did not yet exist.
         </p>
 
-        <h3 class="story-h3">University Hospital Zurich — Building Systems That Last</h3>
+        <h3 class="story-h3">University Hospital Zurich: Building Systems That Last</h3>
         <p class="story-body">
-          Years later, this vision was further deepened through advanced postgraduate cardiovascular systems training at the <strong>University Hospital Zurich</strong> — one of Europe's foremost academic medical centres — through the internationally recognised <strong>Postgraduate Course in Heart Failure (PCHF)</strong>. Dr. Bediako Mensah is currently enrolled in the programme and is expected to complete the <strong>Certificate of Advanced Studies (CAS)</strong> in 2027.
+          Years later, this vision was further deepened through advanced postgraduate cardiovascular systems training at the <strong>University Hospital Zurich</strong>, one of Europe's foremost academic medical centres, through the internationally recognised <strong>Postgraduate Course in Heart Failure (PCHF)</strong>. Dr. Bediako Mensah is currently enrolled in the programme and is expected to complete the <strong>Certificate of Advanced Studies (CAS)</strong> in 2027.
         </p>
         <p class="story-body">
           The PCHF programme brought together cardiovascular clinicians and health system leaders from across the world to examine how sustainable, high-quality heart failure care is designed, implemented, and measured at scale. The curriculum was rigorous: heart failure systems design, longitudinal patient registries, multidisciplinary care models, implementation science, outcomes measurement, and the principles of continuous quality improvement in cardiovascular programmes.
         </p>
         <p class="story-body">
-          While Cuba taught the importance of equity and community engagement, and Cardiocentro provided deep specialist clinical expertise, Zurich answered the question that had been forming for years: how do you build a cardiovascular system that does not just serve patients today — but continues to serve them, improves over time, and generates the evidence to change policy permanently?
+          While Cuba taught the importance of equity and community engagement, and Cardiocentro provided deep specialist clinical expertise, Zurich answered the question that had been forming for years: how do you build a cardiovascular system that does not just serve patients today, but continues to serve them, improves over time, and generates the evidence to change policy permanently?
         </p>
 
         <div class="pchf-photo-block reveal">
@@ -1510,7 +1510,7 @@ $programTypeLabels = [
               <strong>Global Learning. Local Impact.</strong><br>
               Participants and faculty of the Postgraduate Course in Heart Failure (PCHF),
               University Hospital Zurich, Switzerland. Dr. Bediako Mensah trained alongside
-              cardiovascular clinicians and health system leaders from across the world —
+              cardiovascular clinicians and health system leaders from across the world,
               bringing the knowledge and frameworks of international cardiovascular medicine
               back to the communities of the Bono Region.
             </div>
@@ -1518,7 +1518,7 @@ $programTypeLabels = [
         </div>
 
         <p class="story-body story-body--personal">
-          Engaging on international cardiovascular platforms brought a further and important realisation. Global cardiovascular leadership is not reserved for large institutions or wealthy countries. The experiences of African clinicians working in under-resourced settings — the patterns of late presentation, the disease burden carried silently by communities without access to diagnostics, the solutions developed out of necessity — these are not peripheral to the global conversation. African experiences and African data deserve a central place in it. BHI's registry is, in part, a contribution to that conversation.
+          Engaging on international cardiovascular platforms brought a further and important realisation. Global cardiovascular leadership is not reserved for large institutions or wealthy countries. The experiences of African clinicians working in under-resourced settings (the patterns of late presentation, the disease burden carried silently by communities without access to diagnostics, the solutions developed out of necessity) are not peripheral to the global conversation. African experiences and African data deserve a central place in it. BHI's registry is, in part, a contribution to that conversation.
         </p>
 
         <h3 class="story-h3">The Convergence</h3>
@@ -1549,7 +1549,7 @@ $programTypeLabels = [
       <div class="journey-step">
         <div class="journey-step-period">Medical School</div>
         <h3>Latin American School of Medicine (ELAM), Cuba</h3>
-        <p>A globally recognised institution founded on equity, prevention, and service to underserved communities. ELAM shaped the conviction that the doctor must go to the patient — not the other way around.</p>
+        <p>A globally recognised institution founded on equity, prevention, and service to underserved communities. ELAM shaped the conviction that the doctor must go to the patient, not the other way around.</p>
       </div>
       <div class="journey-step">
         <div class="journey-step-period">Specialist Cardiology Training</div>
@@ -1557,19 +1557,19 @@ $programTypeLabels = [
         <p>One of Cuba's leading cardiovascular centres. Advanced training in echocardiography, heart failure, structural heart disease, preventive cardiology, and cardiovascular diagnostics. Where the pattern of late presentation became impossible to ignore.</p>
       </div>
       <div class="journey-step">
-        <div class="journey-step-period">Postgraduate Training — Ongoing</div>
-        <h3>University Hospital Zurich — PCHF (CAS expected 2027)</h3>
-        <p>Advanced postgraduate cardiovascular systems training through the internationally recognised Postgraduate Course in Heart Failure (PCHF), University Hospital Zurich. Currently enrolled — Certificate of Advanced Studies (CAS) expected 2027. Focused on heart failure systems, registries, implementation science, multidisciplinary care, outcomes measurement, and sustainable cardiovascular programme development.</p>
+        <div class="journey-step-period">Postgraduate Training, Ongoing</div>
+        <h3>University Hospital Zurich: PCHF (CAS expected 2027)</h3>
+        <p>Advanced postgraduate cardiovascular systems training through the internationally recognised Postgraduate Course in Heart Failure (PCHF), University Hospital Zurich. Currently enrolled, Certificate of Advanced Studies (CAS) expected 2027. Focused on heart failure systems, registries, implementation science, multidisciplinary care, outcomes measurement, and sustainable cardiovascular programme development.</p>
       </div>
       <div class="journey-step">
         <div class="journey-step-period">Current Role</div>
         <h3>Consulting Cardiologist, Sunyani Teaching Hospital</h3>
-        <p>Providing specialist cardiac care, echocardiography, ABPM monitoring, and cardiology inpatient management at the Bono Region's primary teaching hospital — while building BHI to serve the communities beyond its walls.</p>
+        <p>Providing specialist cardiac care, echocardiography, ABPM monitoring, and cardiology inpatient management at the Bono Region's primary teaching hospital, while building BHI to serve the communities beyond its walls.</p>
       </div>
       <div class="journey-step">
-        <div class="journey-step-period">2026 — Present</div>
+        <div class="journey-step-period">2026–Present</div>
         <h3>Founder, Bono Heart Initiative</h3>
-        <p>The convergence of ELAM's community philosophy, Cardiocentro's specialist expertise, and Zurich's systems thinking — applied to one region, one mission, and 1.2 million people who deserve better.</p>
+        <p>The convergence of ELAM's community philosophy, Cardiocentro's specialist expertise, and Zurich's systems thinking, applied to one region, one mission, and 1.2 million people who deserve better.</p>
       </div>
     </div>
   </div>
@@ -1605,17 +1605,17 @@ $programTypeLabels = [
       <div class="vision-point">
         <div class="vision-point-icon">🇬🇭</div>
         <h3>A Model for Ghana</h3>
-        <p>BHI is designed to be replicable. If it works in the Bono Region, the model — community screening, CMR registries, structured referral — can be adopted across Ghana's underserved regions.</p>
+        <p>BHI is designed to be replicable. If it works in the Bono Region, the model of community screening, CMR registries, and structured referral can be adopted across Ghana's underserved regions.</p>
       </div>
       <div class="vision-point">
         <div class="vision-point-icon">🌱</div>
         <h3>The Next Generation</h3>
-        <p>Training community health workers in CMR literacy. Building a generation of Bono Region residents who understand their heart, their metabolism, and their kidneys — before disease takes hold.</p>
+        <p>Training community health workers in CMR literacy. Building a generation of Bono Region residents who understand their heart, their metabolism, and their kidneys, before disease takes hold.</p>
       </div>
     </div>
     <div class="vision-closing reveal">
-      "I did not build this for recognition. I built it because the Bono Region deserves a doctor who shows up — and a system that stays."
-      <br><span style="font-size:0.85rem; color:rgba(255,255,255,0.55); font-style:normal; font-weight:400; display:block; margin-top:0.5rem;">— Dr. Edward Bediako Mensah, MD</span>
+      "I did not build this for recognition. I built it because the Bono Region deserves a doctor who shows up, and a system that stays."
+      <br><span style="font-size:0.85rem; color:rgba(255,255,255,0.55); font-style:normal; font-weight:400; display:block; margin-top:0.5rem;">Dr. Edward Bediako Mensah, MD</span>
     </div>
   </div>
 </section>
@@ -1651,7 +1651,7 @@ $programTypeLabels = [
 <section class="sub-hero">
   <div class="section-tag">Get Involved</div>
   <h1>Give a Saturday.<br>Help save a heart.</h1>
-  <p>BHI's screening days run on volunteers — registering families, guiding them through the process,
+  <p>BHI's screening days run on volunteers: registering families, guiding them through the process,
      and keeping the day organised so our clinical team can focus on care. No medical background required
      for most roles; just time, reliability, and a heart for your community.</p>
 </section>
@@ -1662,7 +1662,7 @@ $programTypeLabels = [
       <div class="section-tag">Where You Fit</div>
       <h2 class="section-title">Four ways to help on screening day.</h2>
       <div class="section-divider"></div>
-      <p class="section-sub">Pick the role that matches your skills and availability — most volunteers work a single outreach day at a time, no long-term commitment required.</p>
+      <p class="section-sub">Pick the role that matches your skills and availability. Most volunteers work a single outreach day at a time, no long-term commitment required.</p>
     </div>
     <div class="role-grid">
       <div class="role-card">
@@ -1683,7 +1683,7 @@ $programTypeLabels = [
       <div class="role-card">
         <div class="ico">🩺</div>
         <h3>Clinical Support</h3>
-        <p>For nurses, clinical students, and allied health workers — assist with vitals, echo setup, and patient flow under supervision.</p>
+        <p>For nurses, clinical students, and allied health workers: assist with vitals, echo setup, and patient flow under supervision.</p>
       </div>
     </div>
   </div>
@@ -1734,14 +1734,14 @@ $programTypeLabels = [
   <div class="section-tag">Clinical Pathway</div>
   <h1>Refer a patient into<br>CMR care.</h1>
   <p>If you're a community health worker, nurse, clinician, or community member who has seen someone
-     showing early cardio-metabolic-renal warning signs, refer them here — our team will follow up
+     showing early cardio-metabolic-renal warning signs, refer them here. Our team will follow up
      directly and connect them to the nearest screening or diagnostic pathway.</p>
 </section>
 
 <div class="urgent-banner">
   <span style="font-size:1.4rem">⚠️</span>
-  <span><strong>For an urgent or emergency case</strong>, don't wait for a form response —
-  call or WhatsApp us directly at <a href="tel:+233243255462">+233 243 255 462</a>.</span>
+  <span><strong>For an urgent or emergency case</strong>, don't wait for a form response.
+  Call or WhatsApp us directly at <a href="tel:+233243255462">+233 243 255 462</a>.</span>
 </div>
 
 <section class="bhi-section" style="padding-top:0">
@@ -1750,7 +1750,7 @@ $programTypeLabels = [
       <div class="section-tag">When to Refer</div>
       <h2 class="section-title">Any of these warning signs is reason enough.</h2>
       <div class="section-divider"></div>
-      <p class="section-sub">BHI screens across the full cardio-metabolic-renal continuum — a patient doesn't need a confirmed diagnosis to be referred, only a reasonable concern.</p>
+      <p class="section-sub">BHI screens across the full cardio-metabolic-renal continuum. A patient doesn't need a confirmed diagnosis to be referred, only a reasonable concern.</p>
     </div>
     <div class="flag-strip">
       <div class="flag-chip"><span class="ico">🫀</span> Obesity / high BMI</div>
@@ -1814,7 +1814,7 @@ $programTypeLabels = [
 <section class="sub-hero">
   <div class="section-tag">CMR Strategic Plan 2026–2028</div>
   <h1>Three years.<br>One system. Built to last.</h1>
-  <p>BHI operates a formal, board-governed strategic plan — not a series of one-off outreach days.
+  <p>BHI operates a formal, board-governed strategic plan, not a series of one-off outreach days.
      Here's what we've already put in place, and what the next two years are built to deliver.</p>
 </section>
 
@@ -1831,7 +1831,7 @@ $programTypeLabels = [
         <div class="plan-year-body">
           <h3>Foundation Year</h3>
           <ul>
-            <li>Formal governance structure established — board-level oversight, clinical advisory input, and financial accountability from the outset.</li>
+            <li>Formal governance structure established: board-level oversight, clinical advisory input, and financial accountability from the outset.</li>
             <li>Longitudinal CMR registry architecture developed, so every patient is tracked from first contact through final outcome.</li>
             <li>Community-focused delivery model built around outreach days, not fixed clinic visits.</li>
             <li>First community screening, diagnostic, and referral cycles run across the Bono Region.</li>
@@ -1903,7 +1903,7 @@ $programTypeLabels = [
   <div class="bhi-modal-box">
     <div class="bhi-modal-header">
       <span class="bhi-modal-title">Register for Screening</span>
-      <button class="bhi-modal-close" onclick="BHI.closeScreeningModal()">Ã—</button>
+      <button class="bhi-modal-close" onclick="BHI.closeScreeningModal()">×</button>
     </div>
     <div class="bhi-modal-body">
       <form data-bhi-form="screening">
@@ -1977,7 +1977,7 @@ $programTypeLabels = [
     fd.set('email', raw.get('email'));
     fd.set('phone', raw.get('phone'));
     fd.set('enquiry_type', 'volunteer');
-    fd.set('subject', 'Volunteer Application — ' + raw.get('role'));
+    fd.set('subject', 'Volunteer Application: ' + raw.get('role'));
     fd.set('message',
       'Preferred role: ' + raw.get('role') + '\n' +
       'District/Community: ' + raw.get('community') + '\n\n' +
@@ -2004,7 +2004,7 @@ $programTypeLabels = [
     fd.set('email', raw.get('email') || '');
     fd.set('phone', raw.get('phone'));
     fd.set('enquiry_type', 'referral');
-    fd.set('subject', 'Patient Referral — ' + raw.get('patient_name'));
+    fd.set('subject', 'Patient Referral: ' + raw.get('patient_name'));
     fd.set('message',
       'Referring person role: ' + raw.get('referrer_role') + '\n\n' +
       'Patient name: ' + raw.get('patient_name') + '\n' +
