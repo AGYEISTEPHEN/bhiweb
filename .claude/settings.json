@@ -58,7 +58,16 @@
       "Bash(/c/xampp/mysql/bin/mysql.exe -u root bonohear_bhiweb -e \"SELECT id,filename FROM gallery_images;\")",
       "Bash(grep -n \"^\\\\s*html\\\\s*{\\\\|^\\\\s*body\\\\s*{\\\\|html,\\\\s*body\\\\|100vh\" \"/c/xampp/htdocs/bhiweb/assets/css/bhi-index.css\")",
       "Bash(curl -s -m 20 -I \"http://bonoheartinitiative.org/index.php\")",
-      "Bash(curl -s -m 20 -I \"http://bonoheartinitiative.org/\")"
+      "Bash(curl -s -m 20 -I \"http://bonoheartinitiative.org/\")",
+      "Bash(mkdir -p /c/Users/GREAT_AS/AppData/Local/Temp/claude/c--xampp-htdocs-bhiweb/e65def27-20dd-47ac-af22-3ea84f055764/scratchpad)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --no-sandbox --window-size=1920,900 --screenshot=/c/Users/GREAT_AS/AppData/Local/Temp/claude/c--xampp-htdocs-bhiweb/e65def27-20dd-47ac-af22-3ea84f055764/scratchpad/scroll_debug.png http://localhost/bhiweb/index.php)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --dump-dom \"http://localhost/bhiweb/index.php\")",
+      "Bash(awk -F: '$1>1896 && $1<1920')",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --no-sandbox --window-size=1920,900 --screenshot=/c/Users/GREAT_AS/AppData/Local/Temp/claude/c--xampp-htdocs-bhiweb/e65def27-20dd-47ac-af22-3ea84f055764/scratchpad/scroll_fixed.png http://localhost/bhiweb/index.php)",
+      "Bash(rm -f \"/c/Users/GREAT_AS/AppData/Local/Temp/claude/c--xampp-htdocs-bhiweb/e65def27-20dd-47ac-af22-3ea84f055764/scratchpad/dom_dump.html\" \"/c/Users/GREAT_AS/AppData/Local/Temp/claude/c--xampp-htdocs-bhiweb/e65def27-20dd-47ac-af22-3ea84f055764/scratchpad/dom_dump_fixed.html\" \"/c/Users/GREAT_AS/AppData/Local/Temp/claude/c--xampp-htdocs-bhiweb/e65def27-20dd-47ac-af22-3ea84f055764/scratchpad/scroll_debug.png\" \"/c/Users/GREAT_AS/AppData/Local/Temp/claude/c--xampp-htdocs-bhiweb/e65def27-20dd-47ac-af22-3ea84f055764/scratchpad/scroll_fixed.png\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\GREAT_AS\\AppData\\Local\\Temp\\claude\\c--xampp-htdocs-bhiweb\\e65def27-20dd-47ac-af22-3ea84f055764\\scratchpad"
     ]
   }
 }
