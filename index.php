@@ -87,9 +87,9 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
 <body>
 
 <nav id="main-nav">
-  <a href="#" class="nav-logo" onclick="switchPage('home'); return false;">
+  <a href="index.php" class="nav-logo" onclick="switchPage('home'); return false;">
     <div class="nav-logo-icon">
-      <img src="assets/img/bhi-logo.png" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+      <img src="assets/img/bhi-logo.png" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
     </div>
     <div class="nav-logo-text">
       Bono Heart Initiative
@@ -274,7 +274,7 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
         <p class="founder-body" style="font-weight:600; color:var(--navy);">
           BHI exists because specialist heart care should not be a privilege reserved for major cities. It should be accessible to every community.
         </p>
-        <a href="#" onclick="switchPage('founder'); return false;" class="founder-link">
+        <a href="index.php?page=founder" onclick="switchPage('founder'); return false;" class="founder-link">
           Meet Dr. Bediako Mensah: Full Story →
         </a>
       </div>
@@ -348,7 +348,7 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
     <div class="cmr-tagline reveal">
       BHI screens for the whole continuum, because treating the heart alone is not enough.
       <span style="display:block; margin-top:0.75rem;">
-        <a href="#" onclick="switchPage('education'); return false;" style="color:var(--gold); font-weight:700; text-decoration:underline;">Learn more about the CMR continuum →</a>
+        <a href="index.php?page=education" onclick="switchPage('education'); return false;" style="color:var(--gold); font-weight:700; text-decoration:underline;">Learn more about the CMR continuum →</a>
       </span>
     </div>
   </div>
@@ -559,7 +559,7 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
       </div>
       <div class="ac-cta-line">
         BHI catches you at Stage 1 and Stage 2, before the breakdown.
-        <a href="#" onclick="switchPage('education'); return false;">Read the full CMR education resource →</a>
+        <a href="index.php?page=education" onclick="switchPage('education'); return false;">Read the full CMR education resource →</a>
       </div>
     </div>
   </div>
@@ -876,7 +876,7 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
       <p>All partner contributions are acknowledged in writing. BHI commits to annual impact reporting that shows exactly what your investment achieved.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
         <a href="#partner-form" class="btn-primary" onclick="document.getElementById('partner-form').scrollIntoView({behavior:'smooth'})">Partner With BHI</a>
-        <a href="#" onclick="switchPage('strategic-plan'); return false;" class="btn-secondary" style="color:var(--navy); border-color:var(--navy);">View Strategic Plan 2026–2028</a>
+        <a href="index.php?page=strategic-plan" onclick="switchPage('strategic-plan'); return false;" class="btn-secondary" style="color:var(--navy); border-color:var(--navy);">View Strategic Plan 2026–2028</a>
       </div>
     </div>
 
@@ -1057,7 +1057,7 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
     <div class="footer-brand">
       <div class="footer-logo">
         <div class="footer-logo-icon">
-          <img src="assets/img/bhi-logo.png" alt="BHI logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+          <img src="assets/img/bhi-logo.png" alt="Bono Heart Initiative logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
         </div>
         <div class="footer-logo-text">
           Bono Heart Initiative
@@ -1091,17 +1091,17 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
       <a href="#registry">Registry</a>
       <a href="#roadmap">Road Ahead</a>
       <a href="#impact">Impact</a>
-      <a href="#" onclick="switchPage('education'); return false;">CMR Education</a>
-      <a href="#" onclick="switchPage('founder'); return false;">Meet the Founder</a>
+      <a href="index.php?page=education" onclick="switchPage('education'); return false;">CMR Education</a>
+      <a href="index.php?page=founder" onclick="switchPage('founder'); return false;">Meet the Founder</a>
       <a href="admin/login">Admin Login</a>
     </div>
     <div class="footer-col">
       <h4>Get Involved</h4>
       <a href="#outreach">Get Screened</a>
       <a href="#partners">Partner With Us</a>
-      <a href="#" onclick="switchPage('volunteer'); return false;">Volunteer</a>
-      <a href="#" onclick="switchPage('refer'); return false;">Refer a Patient</a>
-      <a href="#" onclick="switchPage('strategic-plan'); return false;">Strategic Plan</a>
+      <a href="index.php?page=volunteer" onclick="switchPage('volunteer'); return false;">Volunteer</a>
+      <a href="index.php?page=refer" onclick="switchPage('refer'); return false;">Refer a Patient</a>
+      <a href="index.php?page=strategic-plan" onclick="switchPage('strategic-plan'); return false;">Strategic Plan</a>
     </div>
     <div class="footer-col">
       <h4>Stay Informed</h4>
@@ -1432,9 +1432,9 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
       direction of your health, and protect everyone who depends on you.
     </p>
     <div class="cta-btns">
-      <a href="#outreach" onclick="switchPage('home'); setTimeout(()=>document.getElementById('outreach').scrollIntoView({behavior:'smooth'}), 150); return false;" class="btn-primary">🩺 Get Screened</a>
-      <a href="#partners" onclick="switchPage('home'); return true;" class="btn-outline-white">Support the Mission</a>
-      <a href="#" onclick="switchPage('home'); return false;" class="btn-outline-white">← Back to BHI Homepage</a>
+      <a href="index.php#outreach" onclick="switchPage('home'); setTimeout(()=>document.getElementById('outreach').scrollIntoView({behavior:'smooth'}), 150); return false;" class="btn-primary">🩺 Get Screened</a>
+      <a href="index.php#partners" onclick="switchPage('home'); return true;" class="btn-outline-white">Support the Mission</a>
+      <a href="index.php" onclick="switchPage('home'); return false;" class="btn-outline-white">← Back to BHI Homepage</a>
     </div>
   </div>
 </section>
@@ -1669,9 +1669,9 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
     <h2>Support the vision.<br><em>Back the movement.</em></h2>
     <p>BHI is built on one person's conviction and one region's need. Help make it the system the Bono Region deserves.</p>
     <div class="cta-row">
-      <a href="#outreach" onclick="switchPage('home'); setTimeout(()=>document.getElementById('outreach').scrollIntoView({behavior:'smooth'}), 150); return false;" class="btn-primary">🩺 Get Screened</a>
-      <a href="#partners" onclick="switchPage('home'); return true;" class="btn-secondary-outline">Partner With BHI</a>
-      <a href="#" onclick="switchPage('home'); return false;" class="btn-secondary-outline">← Back to Homepage</a>
+      <a href="index.php#outreach" onclick="switchPage('home'); setTimeout(()=>document.getElementById('outreach').scrollIntoView({behavior:'smooth'}), 150); return false;" class="btn-primary">🩺 Get Screened</a>
+      <a href="index.php#partners" onclick="switchPage('home'); return true;" class="btn-secondary-outline">Partner With BHI</a>
+      <a href="index.php" onclick="switchPage('home'); return false;" class="btn-secondary-outline">← Back to Homepage</a>
     </div>
   </div>
 </section>
@@ -1929,7 +1929,7 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
     <div class="prospectus-cta">
       <h3>Want the full plan and partnership terms?</h3>
       <p>Reach out to our partnerships team and we'll share the detailed strategic plan and prospectus directly.</p>
-      <a href="#" class="btn-primary" onclick="switchPage('home'); setTimeout(()=>document.getElementById('partners')?.scrollIntoView({behavior:'smooth'}), 150); return false;">Get in Touch →</a>
+      <a href="index.php#partners" class="btn-primary" onclick="switchPage('home'); setTimeout(()=>document.getElementById('partners')?.scrollIntoView({behavior:'smooth'}), 150); return false;">Get in Touch →</a>
     </div>
   </div>
 </section>
