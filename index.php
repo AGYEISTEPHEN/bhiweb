@@ -38,24 +38,24 @@ $pageMeta = [
         'description' => 'BHI brings free cardio-metabolic-renal screening, echocardiography, and specialist referral to underserved communities across the Bono Region. Get screened. Support the mission.',
     ],
     'education' => [
-        'title'       => 'Understanding CMR Disease | CMR Education — Bono Heart Initiative',
-        'description' => 'Learn how heart disease, diabetes, and kidney disease form one connected condition, and how early community screening catches it before it becomes irreversible.',
+        'title'       => 'Understanding CMR Disease | Bono Heart Initiative',
+        'description' => 'Learn how heart disease, diabetes, obesity, and kidney disease are connected as one continuum — and why catching it early in the Bono Region saves lives.',
     ],
     'founder' => [
-        'title'       => 'Meet Dr. Edward Bediako Mensah | Founder, Bono Heart Initiative',
-        'description' => "The story behind Bono Heart Initiative: Dr. Bediako Mensah's training from Cuba to Zurich, and why he built a cardio-metabolic-renal care system for the Bono Region.",
+        'title'       => 'Dr. Edward Bediako Mensah | Founder, Bono Heart Initiative',
+        'description' => 'Meet the cardiologist behind BHI: trained at ELAM Cuba, Cardiocentro Ernesto Che Guevara, and University Hospital Zurich, now serving the Bono Region.',
     ],
     'volunteer' => [
-        'title'       => 'Volunteer With Us | Bono Heart Initiative',
-        'description' => "Join BHI's screening days as a volunteer, registering families, guiding them through the process, and helping bring cardio-metabolic-renal care to the Bono Region.",
+        'title'       => 'Volunteer With BHI | Bono Heart Initiative',
+        'description' => "Give a Saturday, help save a heart. Join BHI's screening days in registration, mobilization, data, or clinical support roles across the Bono Region.",
     ],
     'refer' => [
-        'title'       => 'Refer a Patient | Bono Heart Initiative',
-        'description' => 'Health professionals can refer patients directly to Bono Heart Initiative for cardio-metabolic-renal screening and specialist follow-up in the Bono Region.',
+        'title'       => 'Refer a Patient for CMR Screening | Bono Heart Initiative',
+        'description' => 'Health workers, nurses, and clinicians: refer patients showing early cardio-metabolic-renal warning signs directly to BHI for screening and follow-up.',
     ],
     'strategic-plan' => [
         'title'       => 'CMR Strategic Plan 2026–2028 | Bono Heart Initiative',
-        'description' => "Bono Heart Initiative's structured plan to build a permanent cardio-metabolic-renal screening and referral system across the Bono Region, Ghana.",
+        'description' => "BHI's three-year roadmap: from foundation and governance in 2026 to a self-sustaining, replicable cardio-metabolic-renal health system by 2028.",
     ],
 ];
 
