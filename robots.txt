@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /database/
+Disallow: /fix_encoding.php
+Disallow: /verify_db.php
+
+Sitemap: https://bonoheartinitiative.org/sitemap.xml
