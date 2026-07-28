@@ -1,8 +1,11 @@
 RewriteEngine On
+
+# Redirect www to non-www (fixes duplicate content issue)
+RewriteCond %{HTTP_HOST} ^www\.bonoheartinitiative\.org$ [NC]
+RewriteRule ^(.*)$ https://bonoheartinitiative.org/$1 [L,R=301]
+
 DirectoryIndex login.php index.php
 # Hide .php extensions from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-
 RewriteRule ^(.*)$ $1.php [NC,L]
-
