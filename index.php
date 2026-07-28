@@ -66,6 +66,121 @@ if (!in_array($currentPage, $validPages, true)) {
 }
 $meta      = $pageMeta[$currentPage];
 $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage : '');
+
+// ── Structured data (JSON-LD), scoped to the page it actually describes ──
+$schemaOrg = [
+    '@context'    => 'https://schema.org',
+    '@type'       => 'NGO',
+    'name'        => 'Bono Heart Initiative',
+    'alternateName' => 'BHI',
+    'url'         => SITE_URL . '/',
+    'logo'        => SITE_URL . '/assets/img/bhi-logo.png',
+    'description' => "A cardiologist-led cardio-metabolic-renal equity initiative bringing heart screening, diabetes detection, renal assessment, and specialist referral closer to communities across the Bono Region, Ghana.",
+    'areaServed'  => [
+        '@type' => 'AdministrativeArea',
+        'name'  => 'Bono Region, Ghana',
+    ],
+    'founder' => [
+        '@type'    => 'Person',
+        'name'     => 'Dr. Edward Bediako Mensah',
+        'jobTitle' => 'Consulting Cardiologist',
+    ],
+    'email'     => 'info@bonoheartinitiative.org',
+    'telephone' => '+233597201858',
+    'sameAs'    => [
+        'https://www.tiktok.com/@bono_heart_initiative',
+    ],
+];
+
+$schemaPerson = [
+    '@context' => 'https://schema.org',
+    '@type'    => 'Person',
+    'name'     => 'Dr. Edward Bediako Mensah',
+    'jobTitle' => 'Consulting Cardiologist',
+    'worksFor' => [
+        ['@type' => 'Organization', 'name' => 'Sunyani Teaching Hospital'],
+        ['@type' => 'Organization', 'name' => 'Bono Heart Initiative'],
+    ],
+    'alumniOf' => [
+        ['@type' => 'CollegeOrUniversity', 'name' => 'Latin American School of Medicine (ELAM), Cuba'],
+        ['@type' => 'CollegeOrUniversity', 'name' => 'Cardiocentro Ernesto Che Guevara, Santa Clara, Cuba'],
+    ],
+];
+
+$schemaFaq = [
+    '@context'   => 'https://schema.org',
+    '@type'      => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name'  => 'I feel fine. Do I still need to be screened?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text'  => 'Yes, and this is the most important message BHI carries. CMR disease is silent for years. High blood pressure has no symptoms until a stroke occurs. Diabetes damages kidneys for a decade before pain begins. Heart failure announces itself only when the heart has already failed. Feeling fine means you are in the stage where intervention works best.',
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name'  => 'Is this only for older people?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text'  => 'No. Hypertension is increasingly common in Ghanaians in their 30s. Obesity and insulin resistance are rising in young adults. BHI screens from age 18 upward, and conducts congenital heart disease screening in children. CMR disease does not wait for age.',
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name'  => 'My mother has diabetes. Does that mean I will get it too?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text'  => "Family history increases your risk, but it does not determine your outcome. Lifestyle, diet, activity, and early screening can dramatically reduce the probability of developing diabetes even with a strong family history. BHI's screening gives you the information to act before the condition develops.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name'  => 'What does BHI actually do when you come to screen me?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text'  => 'At Tier 1 (community screening), BHI measures your blood pressure, blood glucose, BMI, and performs an ECG. If anything is flagged, you are invited to a Tier 2 session at our hub, where echocardiography, 24-hour BP monitoring, metabolic blood tests, and kidney function tests are performed. Everything is explained to you clearly. Nothing costs you anything.',
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name'  => 'Can CMR disease be treated or reversed?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text'  => 'At early stages, absolutely. Obesity and insulin resistance can be reversed with lifestyle intervention. Blood pressure can be normalised with medication and lifestyle changes. Early kidney damage can be slowed or halted. The key is catching the disease in Stage 1, 2, or 3, not Stage 6 or 7. That is the entire rationale for BHI\'s existence.',
+            ],
+        ],
+    ],
+];
+
+$schemaArticle = [
+    '@context'    => 'https://schema.org',
+    '@type'       => 'Article',
+    'headline'    => 'Three Years. One System. Built to Last.',
+    'description' => $pageMeta['strategic-plan']['description'],
+    'author' => [
+        '@type' => 'Organization',
+        'name'  => 'Bono Heart Initiative',
+        'url'   => SITE_URL . '/',
+    ],
+    'publisher' => [
+        '@type' => 'Organization',
+        'name'  => 'Bono Heart Initiative',
+        'logo'  => [
+            '@type' => 'ImageObject',
+            'url'   => SITE_URL . '/assets/img/bhi-logo.png',
+        ],
+    ],
+    'mainEntityOfPage' => $canonical,
+];
+
+$pageSchemas = [
+    'home'           => $schemaOrg,
+    'founder'        => $schemaPerson,
+    'education'      => $schemaFaq,
+    'strategic-plan' => $schemaArticle,
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,6 +194,9 @@ $canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage
 <meta property="og:title" content="<?= htmlspecialchars($meta['title']) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($meta['description']) ?>">
 <meta property="og:url" content="<?= htmlspecialchars($canonical) ?>">
+<?php if (isset($pageSchemas[$currentPage])): ?>
+<script type="application/ld+json"><?= json_encode($pageSchemas[$currentPage], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<?php endif; ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/bhi-index.css?v=<?= @filemtime(__DIR__ . '/assets/css/bhi-index.css') ?: BHI_VERSION ?>">
