@@ -30,17 +30,55 @@ $programTypeLabels = [
     'awareness_campaign' => 'Awareness Campaign',
     'other' => 'Outreach Program',
 ];
+
+// ── Per-page SEO metadata (site is a single-page app; ?page= selects the section) ──
+$pageMeta = [
+    'home' => [
+        'title'       => 'Bono Heart Initiative | Cardio-Metabolic-Renal Care in the Bono Region, Ghana',
+        'description' => 'BHI brings free cardio-metabolic-renal screening, echocardiography, and specialist referral to underserved communities across the Bono Region. Get screened. Support the mission.',
+    ],
+    'education' => [
+        'title'       => 'Understanding CMR Disease | CMR Education — Bono Heart Initiative',
+        'description' => 'Learn how heart disease, diabetes, and kidney disease form one connected condition, and how early community screening catches it before it becomes irreversible.',
+    ],
+    'founder' => [
+        'title'       => 'Meet Dr. Edward Bediako Mensah | Founder, Bono Heart Initiative',
+        'description' => "The story behind Bono Heart Initiative: Dr. Bediako Mensah's training from Cuba to Zurich, and why he built a cardio-metabolic-renal care system for the Bono Region.",
+    ],
+    'volunteer' => [
+        'title'       => 'Volunteer With Us | Bono Heart Initiative',
+        'description' => "Join BHI's screening days as a volunteer, registering families, guiding them through the process, and helping bring cardio-metabolic-renal care to the Bono Region.",
+    ],
+    'refer' => [
+        'title'       => 'Refer a Patient | Bono Heart Initiative',
+        'description' => 'Health professionals can refer patients directly to Bono Heart Initiative for cardio-metabolic-renal screening and specialist follow-up in the Bono Region.',
+    ],
+    'strategic-plan' => [
+        'title'       => 'CMR Strategic Plan 2026–2028 | Bono Heart Initiative',
+        'description' => "Bono Heart Initiative's structured plan to build a permanent cardio-metabolic-renal screening and referral system across the Bono Region, Ghana.",
+    ],
+];
+
+$validPages  = ['home', 'education', 'founder', 'volunteer', 'refer', 'strategic-plan'];
+$currentPage = get_param('page', 'home');
+if (!in_array($currentPage, $validPages, true)) {
+    $currentPage = 'home';
+}
+$meta      = $pageMeta[$currentPage];
+$canonical = SITE_URL . '/' . ($currentPage !== 'home' ? '?page=' . $currentPage : '');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bono Heart Initiative | Cardio-Metabolic-Renal Care in the Bono Region, Ghana</title>
+<title><?= htmlspecialchars($meta['title']) ?></title>
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/bhi-logo.png"/>
-<meta name="description" content="BHI brings free cardio-metabolic-renal screening, echocardiography, and specialist referral to underserved communities across the Bono Region. Get screened. Support the mission.">
-<meta property="og:title" content="Bono Heart Initiative: Cardio-Metabolic-Renal Care for All">
-<meta property="og:description" content="Heart care should not depend on where you live. BHI addresses the full cardio-metabolic-renal continuum, from heart and kidney disease to diabetes, across the Bono Region, Ghana.">
+<meta name="description" content="<?= htmlspecialchars($meta['description']) ?>">
+<link rel="canonical" href="<?= htmlspecialchars($canonical) ?>">
+<meta property="og:title" content="<?= htmlspecialchars($meta['title']) ?>">
+<meta property="og:description" content="<?= htmlspecialchars($meta['description']) ?>">
+<meta property="og:url" content="<?= htmlspecialchars($canonical) ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/bhi-index.css?v=<?= @filemtime(__DIR__ . '/assets/css/bhi-index.css') ?: BHI_VERSION ?>">
